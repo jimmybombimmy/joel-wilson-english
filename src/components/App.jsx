@@ -1,16 +1,17 @@
 import { useState } from 'react'
-import './App.css'
+import '../styles/App.css'
 import { Routes, Route, Navigate } from "react-router-dom";
 import NavFile from './navbar/NavFile.jsx'
+import Home from './home/Home.jsx';
 
 function App() {
 
   return (
     <>
     <NavFile expand="lg"/>
-    {/* <Routes>
-
-    </Routes> */}
+    <Routes>
+      <Route path="/" element={<Home />}></Route>
+    </Routes>
     </>
   )
 }
