@@ -1,3 +1,5 @@
+/* -----Hero Section----- */
+
 #heroSection {
   width: 100%;
 } 
@@ -42,4 +44,34 @@
   transform: translate(30%, -50%);
   border-radius: 50%;
   height: 300px;
+}
+
+/* -----Blog Section----- */
+
+#blogsHomeSection {
+  width: 100vw;
+  display: inline-block;
+  position:relative;
+  text-align: center;
+  padding: 50px 0;
+  background-color: rgb(238, 238, 238);
+}
+
+.blogBox {
+  text-align: center;
+  height: 500px;
+  width: 300px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 3px 5px lightgrey; 
+  border-radius: 5px;
+  position: relative;
+  display: inline-block;
+  margin: 50px;
+  padding: 10px;
+}
+
+.blogBoxImg {
+  height: 200px;
+  width: 200px;
+  justify-content: center;
 }
