@@ -2,6 +2,7 @@ import "../../styles/Home.css";
 import michaelInABox from "../../img/michael-in-a-box.png";
 import learnUnderline from "../../img/learn-underline.png";
 import wavyArrows from "../../img/wavy-arrows.png";
+import triangleArrows from "../../img/triangle-arrows.png"
 
 function Home() {
   return (
@@ -9,6 +10,7 @@ function Home() {
       <main>
         <section id="heroSection" data-interval="false">
           <section id="heroLeft">
+            <img id="triangleArrows" src={triangleArrows} alt="" />
             <article id="heroInfo">
               <h1 id="heroTitle">Let's learn English together!</h1>
               <img id="learnUnderline" src={learnUnderline} alt="" />
@@ -25,6 +27,9 @@ function Home() {
           <section id="heroRight">
             <img id="heroImg" src={michaelInABox} alt="michael-box" />
           </section>
+        </section>
+        <section id="chooseYourClassSection">
+
         </section>
         {/* <section id="blogsHomeSection">
         <h2>Articles and Blogs</h2>

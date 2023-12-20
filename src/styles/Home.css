@@ -6,7 +6,7 @@
   width: 100%;
   /* height: 800px; */
   padding: 80px 50px;
-  background-color: bisque;
+  background: linear-gradient(rgb(255, 240, 203, 1), rgb(255, 240, 203, 0.5));
   display: grid;
   grid-template-columns: auto min-content;
 } 
@@ -22,6 +22,12 @@
   grid-row: 1 / 2;
 }
 
+#triangleArrows {
+  position: relative;
+  left: 350px;
+  bottom: 15px;
+}
+
 #heroInfo {
   position: absolute;
   top: 50%;
@@ -33,6 +39,7 @@
   font-size: 4.5rem;
   line-height: 100%;
   letter-spacing: 1px;
+  color: #0A4D78;
 }
 
 #learnUnderline {
@@ -48,6 +55,7 @@
   max-width: 460px;
   font-size: 1.25rem;
   line-height: 150%;
+  color: #565656;
 }
 
 #wavyArrows {
@@ -68,11 +76,11 @@
 }
 
 .heroButton1 {
-  background-color: orange;
+  background-color: #F0A050;
 }
 
 .heroButton2 {
-  background-color: blue;
+  background-color: #0A4D78;
 }
 
 
