@@ -3,6 +3,9 @@ import michaelInABox from "../../img/michael-in-a-box.png";
 import learnUnderline from "../../img/learn-underline.png";
 import wavyArrows from "../../img/wavy-arrows.png";
 import triangleArrows from "../../img/triangle-arrows.png"
+import grammarBubble from "../../img/grammar-bubble.png"
+import speakBubble from "../../img/speak-bubble.png"
+import vocabBubble from "../../img/vocabulary-bubble.png"
 
 function Home() {
   return (
@@ -29,7 +32,18 @@ function Home() {
           </section>
         </section>
         <section id="chooseYourClassSection">
-
+          <h2 id="chooseYourClassTitle">Choose your class!</h2>
+          <section id="justXGrouped">
+            <section className="justXSections justGrammarSection">
+              <img src={grammarBubble} alt="Grammar speech bubble" />
+            </section>
+            <section className="justXSections justSpeakSection">
+              <img src={speakBubble} alt="Speak speech bubble" />
+            </section>
+            <section className="justXSections justVocabSection">
+              <img src={vocabBubble} alt="Vocabulary speech bubble" />
+            </section>
+          </section>
         </section>
         {/* <section id="blogsHomeSection">
         <h2>Articles and Blogs</h2>

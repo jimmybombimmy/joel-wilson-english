@@ -100,6 +100,51 @@
   margin: auto;
 }
 
+
+
+
+
+
+
+
+/* -----Choose your class section----- */
+
+#chooseYourClassTitle {
+  text-align: center;
+  margin-top: 150px;
+  font-size: 60px;
+}
+
+#justXGrouped {
+  display: flex;
+  justify-content: space-around;
+  margin: 100px;
+}
+
+.justXSections {
+  height: 500px;
+  width: 350px;
+  background-color: grey;
+  display: inline-block;
+  border-radius: 40px;
+  text-align: center;
+}
+
+.justGrammarSection {
+ background-color: #E7FFF6;
+}
+
+.justSpeakSection {
+  background-color: #FEF7E5;
+}
+
+.justVocabSection {
+  background-color: #EBFCFF;
+}
+
+
+
+
 /* -----Blog Section----- */
 
 #blogsHomeSection {
