@@ -1,27 +1,32 @@
 import "../../styles/Home.css";
-import joelImg from "../../img/joel-linkedin.jpeg";
-import { Button, Carousel } from "react-bootstrap";
-import BlogBox from "./BlogBox";
+import michaelInABox from "../../img/michael-in-a-box.png";
+import learnUnderline from "../../img/learn-underline.png";
+import wavyArrows from "../../img/wavy-arrows.png";
 
 function Home() {
   return (
     <>
       <main>
         <section id="heroSection" data-interval="false">
-          <div id="heroLeft" className="heroParts">
-            <article id="heroLeftText">
-              <h1>Joel Wilson</h1>
-              <h2>English Teacher Extraordinaire</h2>
-              <Button className="homeButton" variant="light">
-                Book a lesson today
-              </Button>
+          <section id="heroLeft">
+            <article id="heroInfo">
+              <h1 id="heroTitle">Let's learn English together!</h1>
+              <img id="learnUnderline" src={learnUnderline} alt="" />
+              <p id="heroParagraph">
+                Hi! My name is Joel and I teach English as a second language. I
+                have been teaching for the past 8 years and know more about
+                England than King Charles himself!
+              </p>
+              <img id="wavyArrows" src={wavyArrows} alt="" />
+              <button className="heroButtons heroButton1">Book a Lesson</button>
+              <button className="heroButtons heroButton2">Find out more</button>
             </article>
-          </div>
-          <div id="heroRight" className="heroParts">
-            <img id="heroRightImg" src={joelImg} alt="Joel Wilson Image" />
-          </div>
+          </section>
+          <section id="heroRight">
+            <img id="heroImg" src={michaelInABox} alt="michael-box" />
+          </section>
         </section>
-        <section id="blogsHomeSection">
+        {/* <section id="blogsHomeSection">
         <h2>Articles and Blogs</h2>
           <Carousel data-bs-theme="dark">
             <Carousel.Item>
@@ -40,7 +45,7 @@ function Home() {
               })}
             </Carousel.Item>
           </Carousel>
-        </section>
+        </section> */}
       </main>
     </>
   );

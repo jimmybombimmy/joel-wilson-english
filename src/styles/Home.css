@@ -1,49 +1,88 @@
 /* -----Hero Section----- */
 
 #heroSection {
-  width: 100%;
+  --heroLRHeight: 500px;
+  --heroLRWidth: 574px;
+  width: 100vw;
+  /* height: 800px; */
+  padding: 80px 50px;
+  background-color: bisque;
 } 
 
-.heroParts {
-  white-space: nowrap;
-  vertical-align: top;
-  height: 600px;
-  width: 50%;
+#heroLeft {
   display: inline-block;
   position: relative;
+  align-content: center;
+  height: var(--heroLRHeight);
+  width: var(--heroLRWidth);
+  margin-left: 80px;
 }
 
-#heroLeft {
-  background-color: orange;
-
-}
-
-#heroLeftText {
-  margin: 0;
+#heroInfo {
   position: absolute;
   top: 50%;
-  left: 30%;
-  transform: translate(-30%, -50%);
+  transform: translateY(-50%);
+  
 }
 
-.homeButton {
-  margin-top: 30px;
-  border: 1px solid grey;
+#heroTitle {
+  font-size: 4.5rem;
+  line-height: 100%;
+  letter-spacing: 1px;
 }
+
+#learnUnderline {
+  position: relative;
+  bottom: 95px;
+  left: 172px;
+  width: 170px;
+}
+
+#heroParagraph {
+  /* margin-top: 20px; */
+  padding-left: 5px;
+  max-width: 460px;
+  font-size: 1.25rem;
+  line-height: 150%;
+}
+
+#wavyArrows {
+  position: absolute;
+  right: 540px;
+  bottom: 40px
+}
+
+.heroButtons {
+  margin-top: 40px;
+  margin-right: 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  border-radius: 15px;
+  padding: 8px 15px;
+  border: none;
+}
+
+.heroButton1 {
+  background-color: orange;
+}
+
+.heroButton2 {
+  background-color: blue;
+}
+
+
+
 
 #heroRight {
-  background-color: rgb(0, 0, 255);
-
+  max-width: var(--heroLRWidth);
+  float: right;
 }
 
-#heroRightImg {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  right: 30%;
-  transform: translate(30%, -50%);
-  border-radius: 50%;
-  height: 300px;
+#heroImg {
+  aspect-ratio: var(--heroLRWidth) / var(--heroLRHeight);
+  max-height: var(--heroLRHeight);
+  margin: auto;
 }
 
 /* -----Blog Section----- */
