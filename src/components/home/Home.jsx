@@ -12,6 +12,7 @@ import rightDots from "../../img/right-dots.png"
 import leftStar from "../../img/left-star.png"
 import middleStar from "../../img/middle-star.png"
 import rightStar from "../../img/right-star.png"
+import oneToOneImg from "../../img/one-to-one-img.png"
 
 function Home() {
   return (
@@ -65,6 +66,17 @@ function Home() {
               {/* <button>Book Now!</button> */}
             </section>
           </section>
+        </section>
+        <section id="soloOrGroupSection">
+          <img id="oneToOneImg" className="soloOrGroupImgs" src={oneToOneImg} alt="" />
+          <article id="oneToOneInfo">
+            <div id="oneToOneContainer">
+            <h2 id="oneToOneTitle">One to One</h2>
+            <p id="oneToOneParagraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            <button className="lessonButtons heroButton2">Book a lesson</button>
+            <button className="lessonButtons heroButton1">Find out more</button>
+            </div>
+          </article>
         </section>
         {/* <section id="blogsHomeSection">
         <h2>Articles and Blogs</h2>
