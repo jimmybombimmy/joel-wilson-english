@@ -14,6 +14,10 @@ import middleStar from "../../img/middle-star.png";
 import rightStar from "../../img/right-star.png";
 import oneToOneImg from "../../img/one-to-one-img.png";
 import groupImg from "../../img/group-img.png";
+import oneToOneSquiggle from "../../img/one-to-one-squiggle.png"
+import groupSquiggle from "../../img/group-squiggle.png"
+import eclipse1 from "../../img/eclipse1.png"
+import eclipse2 from "../../img/eclipse2.png"
 
 function Home() {
   return (
@@ -90,7 +94,9 @@ function Home() {
           </section>
         </section>
         <section id="soloOrGroupSection">
+          
           <section id="oneToOneSection">
+          <img id="eclipse1" src={eclipse1} alt="" />
             <img
               id="oneToOneImg"
               className="soloOrGroupImgs"
@@ -99,6 +105,7 @@ function Home() {
             />
             <article id="oneToOneInfo">
               <div id="oneToOneContainer">
+                <img id="oneToOneSquiggle" src={oneToOneSquiggle} alt="" />
                 <h2 id="oneToOneTitle">One to one</h2>
                 <p id="oneToOneParagraph">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -139,7 +146,10 @@ function Home() {
               src={groupImg}
               alt=""
             />
+            <img id="groupSquiggle" src={groupSquiggle} alt="" />
+            <img id="eclipse2" src={eclipse2} alt="" />
           </section>
+
         </section>
         {/* <section id="blogsHomeSection">
         <h2>Articles and Blogs</h2>
