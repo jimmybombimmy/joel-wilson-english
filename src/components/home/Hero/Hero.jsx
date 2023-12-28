@@ -1,5 +1,5 @@
 import "../Hero/Hero.css"
-import { triangleArrows, learnUnderline, wavyArrows, michaelInABox } from "../../../img/home/home-images"
+import { triangleArrows, learnUnderline, wavyArrows, michaelInABox } from "../../../assets/home/home-images"
 
 
 export default  function HeroSection(homeImg) {
