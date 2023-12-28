@@ -1,0 +1,124 @@
+/* -----Choose your class section----- */
+
+#chooseYourClassTitle {
+  text-align: center;
+  margin: 100px 0;
+  font-size: 4.5rem;
+}
+
+#justXGrouped {
+  display: flex;
+  justify-content: space-around;
+  margin: 50px 150px;
+}
+
+.justXSections {
+  height: auto;
+  width: 270px;
+  background-color: grey;
+  display: inline-block;
+  border-radius: 40px;
+  text-align: center;
+  padding: 30px 0 10px;
+  margin-bottom: 100px;
+}
+
+.justBubbles {
+  height: 80px;
+}
+
+.justXSections > h3 {
+  margin-top: 16px;
+  font-size: 2rem;
+}
+
+.justXSections > p {
+  font-size: 0.8rem;
+  line-height: 150%;
+  margin: 10px calc((100% - 220px) / 2);
+  width: 220px;
+  justify-self: center;
+}
+
+/* .justXSections > button {
+  height: 3.25rem;
+  width: 12.5rem;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  border: none;
+} */
+
+.justGrammarSection {
+  background-color: #e7fff6;
+}
+
+#leftStar {
+  position: relative;
+  margin-top: -46px;
+  margin-left: -46px;
+  bottom: 150px;
+  right: 80px;
+}
+
+#leftDots {
+  position: relative;
+  margin-top: -220px;
+  margin-left: -151px;
+  top: 100px;
+  left: 8px;
+  z-index: -1;
+}
+
+.justGrammarSection > button {
+  background-color: #21a372;
+}
+
+.justSpeakSection {
+  background-color: #fef7e5;
+}
+
+#middleStar {
+  position: relative;
+  margin-top: -46px;
+  margin-left: -46px;
+  top: 310px;
+}
+
+#middleDots {
+  position: relative;
+  margin-left: -220px;
+  margin-top: -151px;
+  top: 248px;
+  left: 226px;
+  z-index: -1;
+}
+
+.justSpeakSection > button {
+  background-color: #f0a050;
+}
+
+.justVocabSection {
+  background-color: #ebfcff;
+}
+
+#rightStar {
+  position: relative;
+  margin-top: -46px;
+  margin-left: -46px;
+  left: 300px;
+}
+
+#rightDots {
+  position: relative;
+  margin-left: -220px;
+  margin-top: -151px;
+  top: 34px;
+  left: 226px;
+  z-index: -1;
+}
+
+.justVocabSection > button {
+  background-color: #0a4d78;
+}

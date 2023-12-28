@@ -1,0 +1,76 @@
+/* SubHeroReviews Section  */
+
+.scroller {
+  max-width: 600px;
+  /* height: 100px; */
+  /* gap: 10px; */
+  outline: 3px solid lime;
+}
+
+.scroller__inner {
+  display: flex;
+  /* gap: 1rem; */
+  padding-block: 1rem;
+  flex-wrap: wrap;
+}
+
+.scroller[data-animated=true] {
+  border: 5px solid lime;
+    overflow: hidden;
+    -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+    height: 100%;
+    top: 10%;
+}
+
+.scroller[data-animated=true] > .scroller__inner {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll var(--_animation-duration, 20s) var(--_animation-direction, forwards) linear infinite;
+}
+
+/* .scroller[data-direction="right"] {
+  --_animation_direction: reverse;
+} */
+
+/* .scroller[data-direction="left"] {
+  --_animation_direction: forwards;
+} */
+
+@keyframes scroll {
+  to {
+    transform: translate(-50%);
+
+  }
+}
+
+
+#subHeroReviewsSection {
+  height: 400px;
+  background-color: lightgrey;
+}
+
+#ovalsContainer {
+  display: flex;
+  /* height: 100%; */
+  /* justify-content:center; */
+  margin: 0 auto;
+  align-items: center;
+}
+
+.oval {
+  width: 150px;
+  background-color: white;
+  display: flex;
+  padding: 40px;
+  border: 1px solid grey;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.reviewImg {
+  height: 200px;
+}
+
+

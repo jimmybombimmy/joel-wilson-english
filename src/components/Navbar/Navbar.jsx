@@ -7,8 +7,7 @@ import {
   Form,
   Offcanvas,
 } from "react-bootstrap";
-import '../../styles/NavFile.css'
-import '../../styles/App.css'
+import './Navbar.css'
 
 function NavFile({expand}) {
   return (

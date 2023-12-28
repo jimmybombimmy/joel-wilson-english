@@ -1,13 +1,10 @@
-import "../../styles/Home.css";
-import * as homeImg from "../../img/home/home-images.js";
+import "./Home.css";
 
-import { useEffect, useState } from "react";
-
-import HeroSection from "./HeroSection.jsx";
-import SubHeroReviewsSection from "./SubHeroReviewsSection.jsx";
-import ChooseYourClassSection from "../ChooseYourClassSection.jsx";
-import SoloOrGroupSection from "./SoloOrGroupSection.jsx";
-import ReviewsSection from "./ReviewsSection.jsx";
+import HeroSection from "./Hero/Hero.jsx";
+import SubHeroReviewsSection from "./SubHeroReviews/SubHeroReviews.jsx";
+import ChooseYourClassSection from "./ChooseYourClass/ChooseYourClass.jsx";
+import SoloOrGroupSection from "./SoloOrGroup/SoloOrGroup.jsx";
+import ReviewsSection from "./Reviews/Reviews.jsx";
 
 function Home() {
 
