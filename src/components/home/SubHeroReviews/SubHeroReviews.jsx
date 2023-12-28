@@ -1,5 +1,5 @@
-import { reviewsArray } from "../../../img/home/home-images";
 import "./SubHeroReviews.css"
+import { reviewsArray } from "../../../img/home/home-images";
 
 export default function SubHeroReviewsSection() {
   const groupedReviews = [];

@@ -1,4 +1,7 @@
+import "./Reviews.css"
+
 import { Carousel } from "react-bootstrap";
+
 
 export default function ReviewsSection() {
   return (

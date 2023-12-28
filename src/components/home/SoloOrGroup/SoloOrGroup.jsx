@@ -1,4 +1,6 @@
+import "./SoloOrGroup.css"
 import { eclipse1, oneToOneImg, oneToOneSquiggle, groupImg, groupSquiggle, eclipse2 } from "../../../img/home/home-images";
+
 
 export default function SoloOrGroupSection() {
   return (

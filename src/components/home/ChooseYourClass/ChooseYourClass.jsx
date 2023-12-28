@@ -1,5 +1,6 @@
-import { leftStar, leftDots, grammarBubble, middleStar, middleDots, speakBubble, rightDots, rightStar, vocabBubble } from "../../../img/home/home-images"
 import "./ChooseYourClass.css"
+import { leftStar, leftDots, grammarBubble, middleStar, middleDots, speakBubble, rightDots, rightStar, vocabBubble } from "../../../img/home/home-images"
+
 
 export default function ChooseYourClassSection() {
   

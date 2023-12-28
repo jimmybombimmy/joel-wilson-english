@@ -6,8 +6,7 @@ import ChooseYourClassSection from "./ChooseYourClass/ChooseYourClass.jsx";
 import SoloOrGroupSection from "./SoloOrGroup/SoloOrGroup.jsx";
 import ReviewsSection from "./Reviews/Reviews.jsx";
 
-function Home() {
-
+export default function Home() {
   return (
     <>
       <main id="homePage">
@@ -20,5 +19,3 @@ function Home() {
     </>
   );
 }
-
-export default Home;
