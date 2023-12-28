@@ -1,57 +1,81 @@
 import "../../styles/Home.css";
-import michaelInABox from "../../img/michael-in-a-box.png";
-import learnUnderline from "../../img/learn-underline.png";
-import wavyArrows from "../../img/wavy-arrows.png";
-import triangleArrows from "../../img/triangle-arrows.png";
-import grammarBubble from "../../img/grammar-bubble.png";
-import speakBubble from "../../img/speak-bubble.png";
-import vocabBubble from "../../img/vocabulary-bubble.png";
-import leftDots from "../../img/left-dots.png";
-import middleDots from "../../img/middle-dots.png";
-import rightDots from "../../img/right-dots.png";
-import leftStar from "../../img/left-star.png";
-import middleStar from "../../img/middle-star.png";
-import rightStar from "../../img/right-star.png";
-import oneToOneImg from "../../img/one-to-one-img.png";
-import groupImg from "../../img/group-img.png";
-import oneToOneSquiggle from "../../img/one-to-one-squiggle.png"
-import groupSquiggle from "../../img/group-squiggle.png"
-import eclipse1 from "../../img/eclipse1.png"
-import eclipse2 from "../../img/eclipse2.png"
+import * as homeImg from "../../img/home/home-images.js";
+import { Carousel } from "react-bootstrap";
+import HeroSection from "./HeroSection.jsx";
+import { useEffect, useState } from "react";
 
 function Home() {
+  const groupedReviews = [];
+  const reviews = homeImg.reviewsArray;
+  const reviewsLength = reviews.length;
+  const reviewsDivideByFour = reviewsLength / 4;
+
+  const fiveReviews = reviews.slice(0, 5);
+
+  const scrollers = document.querySelectorAll(".scroller");
+
+  function checkForAnimation() {
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      addAnimation();
+    }
+  }
+
+  function addAnimation() {
+    scrollers.forEach((scroller) => { 
+      scroller.setAttribute("data-animated", true);
+
+      const scrollerInner = scroller.querySelector(".scroller__inner");
+      const scrollerContent = Array.from(scrollerInner.children);
+      scrollerContent.splice(fiveReviews.length);
+
+      scrollerContent.forEach((item) => {
+        const duplicatedItem = item.cloneNode(true);
+        duplicatedItem.setAttribute("aria-hidden", true); // stops duplicated content showing up in a screen reader
+        scrollerInner.appendChild(duplicatedItem);
+      });
+    });
+  }
+
+  // const mover = document.querySelectorAll(".mover")
+  // console.log(mover[0].getBoundingClientRect()) //doesn't work asynchronously
+
   return (
     <>
-      <main>
-        <section id="heroSection" data-interval="false">
-          <section id="heroLeft">
-            <img id="triangleArrows" src={triangleArrows} alt="" />
-            <article id="heroInfo">
-              <h1 id="heroTitle">Let's learn English together!</h1>
-              <img id="learnUnderline" src={learnUnderline} alt="" />
-              <p id="heroParagraph">
-                Hi! My name is Joel and I teach English as a second language. I
-                have been teaching for the past 8 years and know more about
-                England than King Charles himself!
-              </p>
-              <img id="wavyArrows" src={wavyArrows} alt="" />
-              <button className="heroButtons heroButton1">Book a Lesson</button>
-              <button className="heroButtons heroButton2">Find out more</button>
-            </article>
-          </section>
-          <section id="heroRight">
-            <img id="heroImg" src={michaelInABox} alt="michael-box" />
-          </section>
+      <main id="homePage">
+        <HeroSection homeImg={homeImg}/>
+
+        <section id="subHeroReviewsSection">
+          <div className="scroller" id="ovalsContainer">
+            <div className="scroller__inner">
+              <div className="oval mover">
+                <h1>1</h1>
+              </div>
+              <div className="oval">
+                <h1>2</h1>
+              </div>
+              <div className="oval">
+                <h1>3</h1>
+              </div>
+              <div className="oval">
+                <h1>4</h1>
+              </div>
+              <div className="oval">
+                <h1>5</h1>
+              </div>
+            </div>
+          </div>
         </section>
+
+
         <section id="chooseYourClassSection">
           <h2 id="chooseYourClassTitle">Choose your class!</h2>
           <section id="justXGrouped">
             <section className="justXSections justGrammarSection">
-              <img id="leftStar" src={leftStar} alt="" />
-              <img id="leftDots" src={leftDots} alt="" />
+              <img id="leftStar" src={homeImg.leftStar} alt="" />
+              <img id="leftDots" src={homeImg.leftDots} alt="" />
               <img
                 className="justBubbles"
-                src={grammarBubble}
+                src={homeImg.grammarBubble}
                 alt="Grammar speech bubble"
               />
               <h3>Just Grammar!</h3>
@@ -62,11 +86,11 @@ function Home() {
               {/* <button>Book Now!</button> */}
             </section>
             <section className="justXSections justSpeakSection">
-              <img id="middleStar" src={middleStar} alt="" />
-              <img id="middleDots" src={middleDots} alt="" />
+              <img id="middleStar" src={homeImg.middleStar} alt="" />
+              <img id="middleDots" src={homeImg.middleDots} alt="" />
               <img
                 className="justBubbles"
-                src={speakBubble}
+                src={homeImg.speakBubble}
                 alt="Speak speech bubble"
               />
               <h3>Just Speak!</h3>
@@ -77,11 +101,11 @@ function Home() {
               {/* <button>Book Now!</button> */}
             </section>
             <section className="justXSections justVocabSection">
-              <img id="rightStar" src={rightStar} alt="" />
-              <img id="rightDots" src={rightDots} alt="" />
+              <img id="rightStar" src={homeImg.rightStar} alt="" />
+              <img id="rightDots" src={homeImg.rightDots} alt="" />
               <img
                 className="justBubbles"
-                src={vocabBubble}
+                src={homeImg.vocabBubble}
                 alt="Vocabulary speech bubble"
               />
               <h3>Just Vocabulary!</h3>
@@ -93,19 +117,23 @@ function Home() {
             </section>
           </section>
         </section>
+
         <section id="soloOrGroupSection">
-          
           <section id="oneToOneSection">
-          <img id="eclipse1" src={eclipse1} alt="" />
+            <img id="eclipse1" src={homeImg.eclipse1} alt="" />
             <img
               id="oneToOneImg"
               className="soloOrGroupImgs"
-              src={oneToOneImg}
+              src={homeImg.oneToOneImg}
               alt=""
             />
             <article id="oneToOneInfo">
               <div id="oneToOneContainer">
-                <img id="oneToOneSquiggle" src={oneToOneSquiggle} alt="" />
+                <img
+                  id="oneToOneSquiggle"
+                  src={homeImg.oneToOneSquiggle}
+                  alt=""
+                />
                 <h2 id="oneToOneTitle">One to one</h2>
                 <p id="oneToOneParagraph">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -143,16 +171,25 @@ function Home() {
             <img
               id="groupImg"
               className="soloOrGroupImgs"
-              src={groupImg}
+              src={homeImg.groupImg}
               alt=""
             />
-            <img id="groupSquiggle" src={groupSquiggle} alt="" />
-            <img id="eclipse2" src={eclipse2} alt="" />
+            <img id="groupSquiggle" src={homeImg.groupSquiggle} alt="" />
+            <img id="eclipse2" src={homeImg.eclipse2} alt="" />
           </section>
+        </section>
 
+        <section id="reviewsSection">
+          <Carousel data-bs-theme="dark">
+            <Carousel.Item></Carousel.Item>
+          </Carousel>
+          {/* {homeImg.reviewsArray.map((review) => {
+            console.log(review);
+            return <img src={review} />;
+          })} */}
         </section>
         {/* <section id="blogsHomeSection">
-        <h2>Articles and Blogs</h2>
+          <h2>Articles and Blogs</h2>
           <Carousel data-bs-theme="dark">
             <Carousel.Item>
               {[1, 2, 3].map((num) => {
@@ -160,12 +197,12 @@ function Home() {
               })}
             </Carousel.Item>
             <Carousel.Item>
-            {[4, 5, 6].map((num) => {
+              {[4, 5, 6].map((num) => {
                 return <BlogBox num={num} key={num} />;
               })}
             </Carousel.Item>
             <Carousel.Item>
-            {[7, 8, 9].map((num) => {
+              {[7, 8, 9].map((num) => {
                 return <BlogBox num={num} key={num} />;
               })}
             </Carousel.Item>
