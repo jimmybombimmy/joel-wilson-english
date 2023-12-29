@@ -21,7 +21,7 @@ import eclipse2 from "./eclipse2.png";
 const reviewsArray = []
 
 for(let i = 1; i <= 44; i++) {
-  reviewsArray.push(`./src/img/home/reviews/review${i}.jpg`)
+  reviewsArray.push(`./src/assets/home/reviews/review${i}.jpg`)
 }
 
 

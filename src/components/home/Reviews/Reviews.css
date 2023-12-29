@@ -1,5 +1,70 @@
 #reviewsSection {
-  height: 400px;
-  background-color: #565656;
+  /* height: 400px; */
+  background-color: #F0F7FE;
   width: 100vw;
+  /* max-width: 1000px; */
+  justify-self: center;
+  padding: 2rem 0 4rem;
+  margin-bottom: 200px;
+}
+
+#reviewsTitle {
+  text-align: center;
+  font-size: 3.5rem;
+  color: #0a4d78;
+  margin-bottom: 2rem;
+}
+
+.carousel-item {
+  justify-content: center;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+  justify-self: center;
+}
+
+.reviewImg {
+  /* width: 100%; */
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  display:grid;
+}
+
+.reviewImg1Of4 {
+  width: 50%;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  object-fit: contain;
+
+}
+
+.reviewImg2Of4 {
+  width: 50%;
+  grid-column: 2/3;
+  grid-row: 1/2;
+  object-fit: contain;
+}
+
+.reviewImg3Of4 {
+  width: 50%;
+  grid-column: 1/2;
+  grid-row: 2/3;
+
+}
+
+.reviewImg4Of4 {
+  width: 50%;
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.carousel-control-prev-icon {
+color: hotpink;
 }
