@@ -25,7 +25,7 @@ export default function ReviewsSection() {
   return (
     <section id="reviewsSection">
       <h2 id="reviewsTitle">What students have to say</h2>
-      <Carousel data-bs-theme="dark" indicators={false} >
+      <Carousel data-bs-theme="dark" indicators={false} interval={null}>
         {baseArray.map((selection) => {
           let i = 0;
           return (
