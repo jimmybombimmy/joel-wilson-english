@@ -6,6 +6,7 @@ import ChooseYourClassSection from "./ChooseYourClass/ChooseYourClass.jsx";
 import SoloOrGroupSection from "./SoloOrGroup/SoloOrGroup.jsx";
 import ReviewsSection from "./Reviews/Reviews.jsx";
 import ArticlesPreview from "./ArticlesPreview/ArticlesPreview.jsx";
+import CallToAction from "./CallToAction/CallToAction.jsx";
 
 export default function Home() {
   return (
@@ -17,6 +18,8 @@ export default function Home() {
         <SoloOrGroupSection />
         <ReviewsSection />
         <ArticlesPreview />
+        <CallToAction />
+        
       </main>
     </>
   );
