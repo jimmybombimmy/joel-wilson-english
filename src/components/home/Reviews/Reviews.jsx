@@ -33,7 +33,6 @@ export default function ReviewsSection() {
               <div className="gridContainer">
                 {selection.map((imgPath) => {
                   i++;
-                  console.log(imgPath);
                   return (
                     <div className="reviewImg">
                       <img className={`reviewImg${i}Of4 reviewImgFront`} src={imgPath} />

@@ -5,6 +5,7 @@ import SubHeroReviewsSection from "./SubHeroReviews/SubHeroReviews.jsx";
 import ChooseYourClassSection from "./ChooseYourClass/ChooseYourClass.jsx";
 import SoloOrGroupSection from "./SoloOrGroup/SoloOrGroup.jsx";
 import ReviewsSection from "./Reviews/Reviews.jsx";
+import ArticlesPreview from "./ArticlesPreview/ArticlesPreview.jsx";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <ChooseYourClassSection />
         <SoloOrGroupSection />
         <ReviewsSection />
+        <ArticlesPreview />
       </main>
     </>
   );

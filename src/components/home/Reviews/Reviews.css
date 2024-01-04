@@ -3,7 +3,6 @@
   width: 100vw;
   justify-self: center;
   padding: 2rem 0 2rem;
-  margin-bottom: 100px;
   overflow: hidden;
 }
 
@@ -30,7 +29,6 @@
   justify-items: center;
   align-items: center;
   margin: auto;
-  padding: 0 50px;
 }
 
 .reviewImg {
@@ -45,7 +43,7 @@
 .reviewImgFront {
   z-index: 1;
   box-shadow: 5px 5px 5px #e2e2e2;
-  width: 65%;
+  width: 60%;
   border-radius: 10px;
 }
 
@@ -97,7 +95,7 @@
   --reviewsDotsSize: 150px;
   height: var(--reviewsDotsSize);
   width: auto;
-  left: 210px;
+  left: 185px;
   top: 50px;
 }
 
