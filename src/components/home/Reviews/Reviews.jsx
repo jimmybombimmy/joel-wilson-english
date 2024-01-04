@@ -1,5 +1,5 @@
 import "./Reviews.css";
-import { reviewsArray } from "../../../assets/home/home-images";
+import { reviewsArray, reviewsCircle, reviewsLoop, reviewsDots } from "../../../assets/home/home-images";
 
 import { Carousel } from "react-bootstrap";
 
@@ -29,17 +29,14 @@ export default function ReviewsSection() {
         {baseArray.map((selection) => {
           let i = 0;
           return (
-            <Carousel.Item  >
+            <Carousel.Item>
               <div className="gridContainer">
                 {selection.map((imgPath) => {
                   i++;
                   console.log(imgPath);
                   return (
                     <div className="reviewImg">
-                      <img
-                        className={`reviewImg${i}Of4`}
-                        src={imgPath}
-                      />
+                      <img className={`reviewImg${i}Of4 reviewImgFront`} src={imgPath} />
                     </div>
                   );
                 })}
@@ -48,6 +45,18 @@ export default function ReviewsSection() {
           );
         })}
       </Carousel>
+      <div className="gridContainer backgroundGridContainer">
+        <div className="reviewImg1Of4">
+          <img className="reviewsCircle" src={reviewsCircle} alt="" />
+        </div>
+        <div className="reviewImg2Of4">
+          <img className="reviewsLoop" src={reviewsLoop} alt="" />
+        </div>
+        <div className="reviewImg3Of4"></div>
+        <div className="reviewImg4Of4">
+          <img className="reviewsDots" src={reviewsDots} />
+        </div>
+      </div>
       {/* {homeImg.reviewsArray.map((review) => {
             console.log(review);
             return <img src={review} />;

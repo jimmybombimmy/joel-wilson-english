@@ -4,6 +4,7 @@
   justify-self: center;
   padding: 2rem 0 2rem;
   margin-bottom: 100px;
+  overflow: hidden;
 }
 
 #reviewsTitle {
@@ -17,6 +18,10 @@
   justify-items: center;
 }
 
+.carousel-item-start, .carousel-item-end {
+  z-index: 1;
+}
+
 .gridContainer {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -25,23 +30,28 @@
   justify-items: center;
   align-items: center;
   margin: auto;
+  padding: 0 50px;
 }
 
 .reviewImg {
+  position: relative;
   height: 300px;
   justify-items: center;
   text-align: center;
   display:grid;
+  
 }
 
-
-.reviewImg > img {
-  width: 60%;
-  border-radius: 10px;
+.reviewImgFront {
+  z-index: 1;
   box-shadow: 5px 5px 5px #e2e2e2;
+  width: 65%;
+  border-radius: 10px;
 }
+
 
 .reviewImg1Of4 {
+  position: relative;
   grid-column: 1/2;
   grid-row: 1/2;
   object-fit: contain;
@@ -66,4 +76,33 @@
   grid-column: 2/3;
   grid-row: 2/3;
   object-fit: contain;
+}
+
+.backgroundGridContainer {
+  margin-top: -600px;
+}
+
+
+.reviewsCircle {
+  position: relative;
+  --reviewsCircleSize: 250px;
+  height: var(--reviewsCircleSize);
+  width: var(--reviewsCircleSize);
+  bottom: 50px;
+  right: 50px;
+}
+
+.reviewsDots {
+  position: relative;
+  --reviewsDotsSize: 150px;
+  height: var(--reviewsDotsSize);
+  width: auto;
+  left: 210px;
+  top: 50px;
+}
+
+.reviewsLoop {
+  position: relative;
+  top: 200px;
+  right: 200px
 }
