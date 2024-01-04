@@ -17,7 +17,7 @@ export default function ArticlesPreview() {
                   <img className="articlePrevImg" src={article.img} alt="" />
                   <article className="articlePrevText">
                   <h3 className="articlePrevTitle">{article.title}</h3>
-                  <p>{article.body}</p>
+                  <p className="articlePrevBody">{article.body}</p>
                   <a className="articlePrevReadMore" href="">Read more</a>
                   </article>
                 </div>

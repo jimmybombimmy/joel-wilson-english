@@ -60,7 +60,13 @@
   display: inline-block;
   width: var(--articlePrevWidth);
   font-size: 2rem;
+  line-height: 110%;
   width: 100%;
+  margin-bottom: 15px;
+}
+
+.articlePrevBody {
+  line-height: 160%;
 }
 
 .articlePrevReadMore {
