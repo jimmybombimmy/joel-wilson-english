@@ -12,12 +12,22 @@
   max-width: 250px;
 }
 
-.footerList * {
-  list-style-type: none;
+.footerList {
+  padding: 0
 }
 
+.footerList li {
+  list-style-type: none;
+  margin: 5px 0;
+}
+
+.footerList h3 {
+  margin-bottom: 20px;
+}
+
+
 .social {
-  padding-bottom: 8px;
+  padding-bottom: 3px;
 }
 
 .socialLink {
