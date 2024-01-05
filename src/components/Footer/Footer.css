@@ -1,0 +1,28 @@
+#footerSection {
+  color: #0A4D78;
+  background: #EFF8FA;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 50px 10% 80px;
+  justify-items: center;
+  width: 100%
+}
+
+#footerSection div {
+  max-width: 250px;
+}
+
+.footerList * {
+  list-style-type: none;
+}
+
+.social {
+  padding-bottom: 8px;
+}
+
+.socialLink {
+  height: 30px;
+  width: 30px;
+  margin-right: 12px;
+}
+
