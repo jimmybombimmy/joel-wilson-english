@@ -2,11 +2,17 @@
   --heroLRHeight: 500px;
   --heroLRWidth: 574px;
   width: 100%;
-  /* height: 800px; */
   padding: 80px 50px;
   background: linear-gradient(rgb(255, 240, 203, 1), rgb(255, 240, 203, 0.5));
+  display: flex;
+  justify-content: center;
+}
+
+#heroInner {
   display: grid;
   grid-template-columns: auto min-content;
+
+  /* width in media */
 }
 
 #heroLeft {
@@ -15,15 +21,17 @@
   align-content: center;
   height: var(--heroLRHeight);
   width: var(--heroLRWidth);
-  margin-left: 80px;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
+
+  /* margin-left in media */
 }
 
 #triangleArrows {
   position: relative;
-  left: 350px;
-  bottom: 15px;
+
+  /* size and position in media */
+
 }
 
 #heroInfo {
@@ -33,43 +41,46 @@
 }
 
 #heroTitle {
-  font-size: 4.5rem;
   line-height: 100%;
   letter-spacing: 1px;
   color: #0a4d78;
+
+  /* margin-bottom in media */
+  /* font-size in media */
 }
 
 #learnUnderline {
   position: relative;
-  bottom: 95px;
-  left: 172px;
-  width: 170px;
+
+  /* size and position in media */
 }
 
 #heroParagraph {
-  /* margin-top: 20px; */
-  padding-left: 5px;
+  padding-left: 4px;
   max-width: 460px;
-  font-size: 1.25rem;
   line-height: 150%;
   color: #565656;
+
+  /* margin-bottom in media */
+  /* font-size in media */
 }
 
 #wavyArrows {
   position: absolute;
-  right: 540px;
-  bottom: 40px;
+
+  /* position and size in media */
 }
 
 .heroButtons {
   margin-top: 40px;
   margin-right: 20px;
   color: white;
-  font-weight: bold;
-  font-size: 1.5rem;
-  border-radius: 15px;
-  padding: 8px 15px;
+  font-weight: 500;
+  border-radius: 10px;
+  padding: 3px 15px;
   border: none;
+
+  /* font-size in media */
 }
 
 .heroButton1 {
@@ -90,6 +101,102 @@
 
 #heroImg {
   aspect-ratio: var(--heroLRWidth) / var(--heroLRHeight);
-  max-height: 500px;
+  display: grid;
   margin: auto;
+
+  /* size in media */
+}
+
+@media (min-width: 1400px) {
+
+  #heroLeft {
+    margin-left: 60px;
+  }
+
+  #learnUnderline {
+    bottom: 95px;
+    left: 172px;
+    width: 170px;
+  }
+
+  #triangleArrows {
+    height: 69px;
+    left: 350px;
+    bottom: 15px;
+  }
+
+  #heroTitle {
+    font-size: 4.5rem;
+    margin-bottom: 8px;
+  }
+
+  #heroParagraph {
+    font-size: 1.3rem;
+    margin-bottom: 16px;
+  }
+
+  #wavyArrows {
+    right: 540px;
+    bottom: 40px;
+  }
+
+  .heroButtons {
+    font-size: 1.3rem;
+  }
+
+  #heroImg {
+    max-height: 500px;
+  }
+
+  #heroInner {
+    width: 1250px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1399px) {
+  #heroInner {
+    --heroLRHeight: 425px;
+    --heroLRWidth: 488px;
+    width: 1000px;
+  }
+
+  #heroLeft {
+    margin-left: 40px;
+  }
+
+  #triangleArrows {
+    height: 62px;
+    left: 296px;
+  }
+
+  #heroTitle {
+    font-size: 3.75rem;
+    margin-bottom: 0px;
+  }
+
+  #learnUnderline {
+    bottom: 74px;
+    left: 138px;
+    width: 150px;
+  }
+
+  #heroParagraph {
+    font-size: 1.2rem;
+    margin-bottom: 0px;
+  }
+
+  #wavyArrows {
+    height: 140px;
+    right: 460px;
+    bottom: 40px;
+  }
+
+  .heroButtons {
+    font-size: 1.3rem;
+  }
+
+  #heroImg {
+    align-self: center;
+    max-height: 425px;
+  }
 }
