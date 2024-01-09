@@ -21,6 +21,7 @@ import reviewsCircle from "./reviews-circle.png"
 import reviewsDots from "./reviews-dots.png"
 import reviewsLoop from "./reviews-loop.png"
 import michaelFranks from "./michael-franks.png"
+import joelLinkedIn from "./joel-linkedin.jpeg"
 
 const reviewsArray = []
 
@@ -30,4 +31,4 @@ for(let i = 1; i <= 44; i++) {
 
 
 
-export { michaelInABox, learnUnderline, wavyArrows, triangleArrows, grammarBubble, speakBubble, vocabBubble, leftDots, middleDots, rightDots, leftStar, middleStar, rightStar, oneToOneImg, groupImg, oneToOneSquiggle, groupSquiggle, eclipse1, eclipse2, reviewsArray, reviewsCircle, reviewsDots, reviewsLoop, michaelFranks };
+export { michaelInABox, learnUnderline, wavyArrows, triangleArrows, grammarBubble, speakBubble, vocabBubble, leftDots, middleDots, rightDots, leftStar, middleStar, rightStar, oneToOneImg, groupImg, oneToOneSquiggle, groupSquiggle, eclipse1, eclipse2, reviewsArray, reviewsCircle, reviewsDots, reviewsLoop, michaelFranks, joelLinkedIn };
