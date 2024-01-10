@@ -78,8 +78,6 @@
     transform: translateY(-50%);
   }
 
-
-
   #learnUnderline {
     position: relative;
 
@@ -100,8 +98,6 @@
     /* position and size in media */
   }
 
- 
-
   #heroRight {
     /* max-width: var(--heroLRWidth); */
     /* float: right; */
@@ -119,7 +115,6 @@
   }
 
   @media (min-width: 1400px) {
-
     #heroSection {
       padding: 80px 50px;
     }
@@ -222,20 +217,18 @@
 }
 
 @media (max-width: 991px) {
-  #heroSection {
-    padding: 20px 50px 60px;
-  }
 
   #joelLinkedIn {
     border-radius: 50%;
-    width: 20%;
-    margin: 30px 40%;
+
+    /* width and margin in media */
   }
 
   #heroTitle {
     text-align: center;
-    font-size: 3.75rem;
     margin: 0 10%;
+
+    /* font-size in media */
   }
 
   #learnUnderlineContainer {
@@ -245,14 +238,15 @@
 
   #learnUnderline {
     position: relative;
-    right: 36px;
-    bottom: 72px;
-    width: 150px;
+
+    /* size and position in media */
   }
 
   .heroParagraph {
     text-align: center;
-    font-size: 1.3rem;
+    padding: 10px 10%
+
+    /* size in media */
   }
 
   #heroButtonsContainer {
@@ -263,8 +257,72 @@
 
   .heroButtons {
     display: flex;
-    font-size: 1.5rem;
     justify-content: center;
     margin: 5%;
+
+    /* font size in media */
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    #heroSection {
+      padding: 20px 50px 60px;
+    }
+
+    #joelLinkedIn {
+      width: 20%;
+      margin: 40px 40%;
+    }
+
+    #heroTitle {
+      font-size: 3.75rem;
+    }
+
+    #learnUnderline {
+      right: 36px;
+      bottom: 72px;
+      width: 150px;
+    }
+
+    .heroParagraph {
+      font-size: 1.3rem;
+    }
+
+    .heroButtons {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (max-width: 767px) {
+    #joelLinkedIn {
+      width: 20%;
+      margin: 30px 40%;
+    }
+
+    #heroTitle {
+      font-size: 2rem;
+    }
+
+    #learnUnderline {
+      right: 96px;
+      bottom: 12px;
+      width: 80px;
+    }
+
+    @media (max-width: 532.5px) {
+      #learnUnderline {
+        right: 20px;
+        bottom: 44px;
+        width: 80px;
+      }
+    }
+
+    .heroParagraph {
+      font-size: 1rem;
+    }
+
+    .heroButtons {
+      font-size: 1.1rem;
+      padding: 6px 16px
+    }
   }
 }
