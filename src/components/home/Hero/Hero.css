@@ -2,7 +2,7 @@
   --heroLRHeight: 500px;
   --heroLRWidth: 574px;
   width: 100%;
-  background: linear-gradient(rgb(255, 240, 203, 1), rgb(255, 240, 203, 0.5));
+  /* background: linear-gradient(rgb(255, 240, 203, 1), rgb(255, 240, 203, 0.5)); */
   display: flex;
   justify-content: center;
 
@@ -226,13 +226,13 @@
 
   #heroTitle {
     text-align: center;
-    margin: 0 10%;
+    margin: 0 15%;
 
     /* font-size in media */
   }
 
   #learnUnderlineContainer {
-    margin: 0 10%;
+    margin: 0 15%;
     text-align: center;
   }
 
@@ -244,15 +244,9 @@
 
   .heroParagraph {
     text-align: center;
-    padding: 10px 10%
+    padding: 5px 10%
 
     /* size in media */
-  }
-
-  #heroButtonsContainer {
-    width: 100%;
-    justify-content: center;
-    display: flex;
   }
 
   .heroButtons {
@@ -274,21 +268,27 @@
     }
 
     #heroTitle {
-      font-size: 3.75rem;
+      font-size: 3rem;
     }
 
     #learnUnderline {
-      right: 36px;
-      bottom: 72px;
-      width: 150px;
+      right: 28px;
+      bottom: 62px;
+      width: 115px;
     }
 
     .heroParagraph {
       font-size: 1.3rem;
     }
 
+    #heroButtonsContainer {
+      width: 100%;
+      justify-content: center;
+      display: flex;
+    }
+
     .heroButtons {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
     }
   }
 
@@ -308,7 +308,7 @@
       width: 80px;
     }
 
-    @media (max-width: 532.5px) {
+    @media (max-width: 607.5px) {
       #learnUnderline {
         right: 20px;
         bottom: 44px;
@@ -318,11 +318,30 @@
 
     .heroParagraph {
       font-size: 1rem;
+      margin: 0;
+    }
+
+    #heroButtonsContainer {
+      width: 100%;
+      justify-content: center;
+      display: flex;
     }
 
     .heroButtons {
+      font-size: 1rem;
+    }
+
+
+
+  }
+
+  @media (max-width: 576px) {
+    .heroButtons {
       font-size: 1.1rem;
-      padding: 6px 16px
+      padding: 6px 16px;
+      margin: 20px 3%;
+      border-radius: 5px;
+      width: 94%;
     }
   }
 }
