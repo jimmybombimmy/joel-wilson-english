@@ -2,7 +2,7 @@
   --heroLRHeight: 500px;
   --heroLRWidth: 574px;
   width: 100%;
-  /* background: linear-gradient(rgb(255, 240, 203, 1), rgb(255, 240, 203, 0.5)); */
+  background: linear-gradient(rgb(255, 240, 203, 1), rgb(255, 240, 203, 0.5));
   display: flex;
   justify-content: center;
 
@@ -163,7 +163,7 @@
     }
   }
 
-  @media (min-width: 992px) and (max-width: 1399px) {
+  @media (min-width: 992px) and (max-width: 1400px) {
     #heroSection {
       padding: 70px 50px;
     }
@@ -308,7 +308,7 @@
       width: 80px;
     }
 
-    @media (max-width: 607.5px) {
+    @media (max-width: 607px) {
       #learnUnderline {
         right: 20px;
         bottom: 44px;
