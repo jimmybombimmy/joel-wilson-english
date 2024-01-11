@@ -5,15 +5,12 @@ import {
   leftStar,
   leftDots,
   grammarBubble,
-  grammarBubbleReverse,
   middleStar,
   middleDots,
   speakBubble,
-  speakBubbleReverse,
   rightDots,
   rightStar,
   vocabBubble,
-  vocabBubbleReverse
 } from "../../../assets/home/home-images";
 
 export default function ChooseYourClassSection() {
