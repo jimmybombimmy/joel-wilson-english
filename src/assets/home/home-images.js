@@ -5,6 +5,9 @@ import triangleArrows from "./triangle-arrows.png";
 import grammarBubble from "./grammar-bubble.png";
 import speakBubble from "./speak-bubble.png";
 import vocabBubble from "./vocabulary-bubble.png";
+import grammarBubbleReverse from "./grammar-bubble-reverse.png";
+import speakBubbleReverse from "./speak-bubble-reverse.png";
+import vocabBubbleReverse from "./vocabulary-bubble-reverse.png";
 import leftDots from "./left-dots.png";
 import middleDots from "./middle-dots.png";
 import rightDots from "./right-dots.png";
@@ -31,4 +34,4 @@ for(let i = 1; i <= 44; i++) {
 
 
 
-export { michaelInABox, learnUnderline, wavyArrows, triangleArrows, grammarBubble, speakBubble, vocabBubble, leftDots, middleDots, rightDots, leftStar, middleStar, rightStar, oneToOneImg, groupImg, oneToOneSquiggle, groupSquiggle, eclipse1, eclipse2, reviewsArray, reviewsCircle, reviewsDots, reviewsLoop, michaelFranks, joelLinkedIn };
+export { michaelInABox, learnUnderline, wavyArrows, triangleArrows, grammarBubble, speakBubble, vocabBubble, leftDots, middleDots, rightDots, leftStar, middleStar, rightStar, oneToOneImg, groupImg, oneToOneSquiggle, groupSquiggle, eclipse1, eclipse2, reviewsArray, reviewsCircle, reviewsDots, reviewsLoop, michaelFranks, joelLinkedIn, grammarBubbleReverse, speakBubbleReverse, vocabBubbleReverse };

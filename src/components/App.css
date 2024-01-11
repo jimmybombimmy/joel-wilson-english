@@ -3,3 +3,21 @@ body {
   margin: 0;
   font-family: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
 }
+
+@media (min-width: 992px) {
+  .hideAbove992 {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .hideBelow991 {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .hideBelow767 {
+    display: none;
+  }
+}

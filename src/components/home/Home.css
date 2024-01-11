@@ -2,18 +2,6 @@
   width: 100%;
 }
 
-@media (min-width: 992px) {
-  .mobileOnly {
-    display: none;
-  }
-}
-
-@media (max-width: 991px) {
-  .compOnly {
-    display: none;
-  }
-}
-
 
 
 /* -----Blog Section----- */
