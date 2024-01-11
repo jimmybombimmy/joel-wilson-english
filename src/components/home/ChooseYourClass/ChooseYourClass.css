@@ -1,15 +1,20 @@
 /* -----Choose your class section----- */
 
+#chooseYourClassSection {
+  color: #343a40;
+}
+
 #chooseYourClassTitle {
   text-align: center;
   margin: 100px 0;
-  font-size: 4.5rem;
+
+  /* font-size in media */
 }
 
 #justXGrouped {
   display: flex;
   justify-content: space-around;
-  margin: 50px 150px;
+  margin: 50px 0;
 }
 
 .justXSections {
@@ -19,25 +24,18 @@
   display: inline-block;
   border-radius: 40px;
   text-align: center;
-  padding: 30px 0 10px;
   margin-bottom: 100px;
-}
 
-.justBubbles {
-  height: 80px;
-}
-
-.justXSections > h3 {
-  margin-top: 16px;
-  font-size: 2rem;
+  /* width in media */
+  /* padding in media */
 }
 
 .justXSections > p {
-  font-size: 0.8rem;
   line-height: 150%;
-  margin: 10px calc((100% - 220px) / 2);
-  width: 220px;
+  margin: 10px auto;
   justify-self: center;
+
+  /* width and size in media */
 }
 
 /* .justXSections > button {
@@ -66,9 +64,9 @@
   position: relative;
   margin-top: -220px;
   margin-left: -151px;
-  top: 100px;
-  left: 8px;
   z-index: -1;
+
+  /* position in media */
 }
 
 .justGrammarSection > button {
@@ -90,9 +88,9 @@
   position: relative;
   margin-left: -220px;
   margin-top: -151px;
-  top: 248px;
-  left: 226px;
   z-index: -1;
+
+  /* position in media */
 }
 
 .justSpeakSection > button {
@@ -114,11 +112,99 @@
   position: relative;
   margin-left: -220px;
   margin-top: -151px;
-  top: 34px;
-  left: 226px;
   z-index: -1;
+
+  /* position in media */
 }
 
 .justVocabSection > button {
   background-color: #0a4d78;
+}
+
+@media (min-width: 992px) {
+  #chooseYourClassSection {
+    max-width: 80%;
+    margin: auto;
+  }
+
+  @media (min-width: 1400px) {
+    #chooseYourClassTitle {
+      font-size: 4rem;
+    }
+
+    .justXSections {
+      width: 300px;
+      padding: 30px 0 10px;
+    }
+
+    .justBubbles {
+      height: 100px;
+    }
+
+    .justXSections > h3 {
+      margin-top: 16px;
+      font-size: 2rem;
+    }
+
+    .justXSections > p {
+      font-size: 1rem;
+      width: 90%;
+    }
+
+    #leftDots {
+      top: 90px;
+      left: 2px;
+    }
+
+    #middleDots {
+      top: 276px;
+      left: 250px;
+    }
+
+    #rightDots {
+      top: 24px;
+      left: 250px;
+    }
+  }
+
+  @media (min-width: 992px) and (max-width: 1400px) {
+    #chooseYourClassTitle {
+      font-size: 3.5rem;
+    }
+
+    .justXSections {
+      width: 270px;
+      padding: 20px 10px 10px;
+    }
+
+    .justBubbles {
+      height: 80px;
+    }
+
+    .justXSections > h3 {
+      margin-top: 20px;
+      font-size: 1.7rem;
+    }
+
+    .justXSections > p {
+      font-size: 1rem;
+      width: 90%;
+      line-height: 140%;
+    }
+
+    #leftDots {
+      top: 110px;
+      left: 8px;
+    }
+
+    #middleDots {
+      top: 256px;
+      left: 226px;
+    }
+
+    #rightDots {
+      top: 44px;
+      left: 226px;
+    }
+  }
 }
