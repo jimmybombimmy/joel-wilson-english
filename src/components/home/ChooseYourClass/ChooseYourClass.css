@@ -127,84 +127,42 @@
     margin: auto;
   }
 
-  @media (min-width: 1400px) {
-    #chooseYourClassTitle {
-      font-size: 4rem;
-    }
-
-    .justXSections {
-      width: 300px;
-      padding: 30px 0 10px;
-    }
-
-    .justBubbles {
-      height: 100px;
-    }
-
-    .justXSections > h3 {
-      margin-top: 16px;
-      font-size: 2rem;
-    }
-
-    .justXSections > p {
-      font-size: 1rem;
-      width: 90%;
-    }
-
-    #leftDots {
-      top: 90px;
-      left: 2px;
-    }
-
-    #middleDots {
-      top: 276px;
-      left: 250px;
-    }
-
-    #rightDots {
-      top: 24px;
-      left: 250px;
-    }
+  #chooseYourClassTitle {
+    font-size: 3.5rem;
   }
 
-  @media (min-width: 992px) and (max-width: 1400px) {
-    #chooseYourClassTitle {
-      font-size: 3.5rem;
-    }
+  .justXSections {
+    width: 270px;
+    padding: 20px 10px 10px;
+  }
 
-    .justXSections {
-      width: 270px;
-      padding: 20px 10px 10px;
-    }
+  .justBubbles {
+    height: 80px;
+  }
 
-    .justBubbles {
-      height: 80px;
-    }
+  .justXSections > h3 {
+    margin-top: 20px;
+    font-size: 1.7rem;
+  }
 
-    .justXSections > h3 {
-      margin-top: 20px;
-      font-size: 1.7rem;
-    }
+  .justXSections > p {
+    font-size: 1rem;
+    width: 90%;
+    line-height: 140%;
+  }
 
-    .justXSections > p {
-      font-size: 1rem;
-      width: 90%;
-      line-height: 140%;
-    }
+  #leftDots {
+    top: 110px;
+    left: 8px;
+  }
 
-    #leftDots {
-      top: 110px;
-      left: 8px;
-    }
+  #middleDots {
+    top: 256px;
+    left: 226px;
+  }
 
-    #middleDots {
-      top: 256px;
-      left: 226px;
-    }
-
-    #rightDots {
-      top: 44px;
-      left: 226px;
-    }
+  #rightDots {
+    top: 4px;
+    left: 226px;
   }
 }
