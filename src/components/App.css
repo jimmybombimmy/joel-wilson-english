@@ -21,3 +21,15 @@ body {
     display: none;
   }
 }
+
+@media (min-width: 768px) {
+  .hideAbove768 {
+    display: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .hideBelow575 {
+    display: none;
+  }
+}
