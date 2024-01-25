@@ -123,6 +123,12 @@
   background-color: #0a4d78;
 }
 
+@media (min-width: 1400px) {
+  #chooseYourClassTitle {
+    font-size: 4rem;
+  }
+}
+
 @media (min-width: 992px) {
   #justXGrouped {
     grid-template-columns: repeat(12, 1fr);

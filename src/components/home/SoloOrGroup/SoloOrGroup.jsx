@@ -16,7 +16,7 @@ export default function SoloOrGroupSection() {
         <article id="oneToOneInfo">
           <div id="oneToOneContainer">
             <img id="oneToOneSquiggle" src={oneToOneSquiggle} alt="" />
-            <h2 id="oneToOneTitle">One to one</h2>
+            <h2 id="oneToOneTitle" className="soloOrGroupTitle">One to one</h2>
             <p id="oneToOneParagraph">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -31,7 +31,7 @@ export default function SoloOrGroupSection() {
       <section id="groupSection">
         <article id="groupInfo">
           <div id="groupContainer">
-            <h2 id="groupTitle">In a group</h2>
+            <h2 id="groupTitle" className="soloOrGroupTitle">In a group</h2>
             <p id="groupParagraph">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut

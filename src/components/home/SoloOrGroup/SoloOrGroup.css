@@ -1,5 +1,6 @@
 #soloOrGroupSection {
-  padding: 0 150px;
+  /* --soloOrGroupBoxWidth in media */
+
   margin: 150px 0 50px;
   overflow: hidden;
 }
@@ -7,7 +8,7 @@
 #oneToOneSection {
   display: grid;
   grid-template-columns: 50% 50%;
-  margin-bottom: 100px;
+  margin: 0 auto 100px;
 }
 
 #eclipse1 {
@@ -37,11 +38,11 @@
   position: relative;
   margin-top: -70px;
   margin-right: -104px;
-  left: 260px
+  left: 260px;
 }
 
 #oneToOneImg {
-  width: 500px;
+  width: var(--soloOrGroupBoxWidth);
   /* height: 492px; */
   display: inline-block;
   grid-column: 1 / 2;
@@ -50,7 +51,7 @@
 
 #oneToOneInfo {
   /* max-width: 50%; */
-  width: 500px;
+  width: var(--soloOrGroupBoxWidth);
   /* height: 492px; */
 
   justify-self: right;
@@ -60,22 +61,24 @@
 }
 
 #oneToOneContainer {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-#oneToOneTitle {
-  font-size: 4.5rem;
+.soloOrGroupTitle {
   font-weight: 500;
+
+  /* size in media */
 }
 
 #oneToOneParagraph {
   padding-left: 3px;
   line-height: 160%;
   max-width: 70ch;
-  font-size: 1.125rem;
+
+  /* font-size in media */
 }
 
 .lessonButtons {
@@ -83,25 +86,21 @@
   margin-right: 40px;
   color: white;
   font-weight: bold;
-  font-size: 1.125rem;
-  border-radius: 15px;
-  padding: 8px 20px;
   border: none;
+
+  /* font-size in media */
+  /* padding in media */
+  /* border-radius in media */
 }
-
-
-
-
-
-
 
 #groupSection {
   display: grid;
   grid-template-columns: 50% 50%;
+  margin: 0 auto;
 }
 
 #groupImg {
-  width: 500px;
+  width: var(--soloOrGroupBoxWidth);
   /* height: 492px; */
   display: inline-block;
   grid-column: 2 / 3;
@@ -111,7 +110,7 @@
 
 #groupInfo {
   /* max-width: 50%; */
-  width: 500px;
+  width: var(--soloOrGroupBoxWidth);
   /* height: 492px; */
   justify-self: left;
   grid-column: 1 / 2;
@@ -120,15 +119,10 @@
 }
 
 #groupContainer {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-#groupTitle {
-  font-size: 4.5rem;
-  font-weight: 500;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 #groupParagraph {
@@ -143,4 +137,74 @@
   position: relative;
   left: 400px;
   bottom: 50px;
+}
+
+@media (min-width: 992px) {
+  @media (min-width: 1400px) {
+    #soloOrGroupSection {
+      padding: 0 60px;
+      --soloOrGroupBoxWidth: 500px;
+    }
+
+    #oneToOneSection {
+      max-width: 1200px;
+    }
+    #groupSection {
+      max-width: 1200px;
+    }
+
+    .soloOrGroupTitle {
+      font-size: 3.75rem;
+      margin-bottom: 8px;
+    }
+
+    #oneToOneParagraph {
+      font-size: 1.125rem;
+    }
+
+    #groupParagraph {
+      font-size: 1.125rem;
+    }
+
+    .lessonButtons {
+      font-size: 1.3rem;
+      padding: 3px 20px;
+      border-radius: 10px;
+    }
+  }
+
+  @media (min-width: 992px) and (max-width: 1400px) {
+    #soloOrGroupSection {
+      padding: 0 40px;
+      --soloOrGroupBoxWidth: 450px;
+    }
+
+    #oneToOneSection {
+      max-width: 1000px;
+    }
+
+    #groupSection {
+      max-width: 1000px;
+    }
+
+    .soloOrGroupTitle {
+      font-size: 3rem;
+      margin-bottom: 16px;
+    }
+
+    #oneToOneParagraph {
+      font-size: 1rem;
+    }
+
+    #groupParagraph {
+      font-size: 1rem;
+    }
+
+    .lessonButtons {
+      font-size: 1.125rem;
+      padding: 3px 16px;
+      border-radius: 10px;
+    }
+
+  }
 }
