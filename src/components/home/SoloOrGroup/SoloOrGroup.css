@@ -13,32 +13,18 @@
 
 #eclipse1 {
   position: relative;
-  height: 600px;
-  width: 712px;
-  margin-bottom: -600px;
-  margin-left: -712px;
-  bottom: 350px;
-  left: 350px;
   z-index: -1;
+
+  /* left and bottom in media */
+  /* size and margins in media */
 }
 
 #eclipse2 {
   position: relative;
-  height: 600px;
-  width: 712px;
-  margin-bottom: -600px;
-  margin-left: -712px;
-  bottom: 650px;
-  left: 900px;
   z-index: -1;
-}
 
-#oneToOneSquiggle {
-  height: 70px;
-  position: relative;
-  margin-top: -70px;
-  margin-right: -104px;
-  left: 260px;
+  /* left and bottom in media */
+  /* size and margins in media */
 }
 
 #oneToOneImg {
@@ -132,13 +118,6 @@
   font-size: 1.125rem;
 }
 
-#groupSquiggle {
-  width: 100px;
-  position: relative;
-  left: 400px;
-  bottom: 50px;
-}
-
 @media (min-width: 992px) {
   @media (min-width: 1400px) {
     #soloOrGroupSection {
@@ -149,6 +128,7 @@
     #oneToOneSection {
       max-width: 1200px;
     }
+
     #groupSection {
       max-width: 1200px;
     }
@@ -170,6 +150,39 @@
       font-size: 1.3rem;
       padding: 3px 20px;
       border-radius: 10px;
+    }
+
+    #oneToOneSquiggle {
+      height: 70px;
+      position: relative;
+      margin-top: -70px;
+      margin-right: -104px;
+      left: 260px;
+    }
+
+    #eclipse1 {
+      left: 350px;
+      bottom: 350px;
+      height: 600px;
+      width: 712px;
+      margin-bottom: -600px;
+      margin-left: -712px;
+    }
+
+    #eclipse2 {
+      left: 1000px;
+      bottom: 650px;
+      height: 600px;
+      width: 712px;
+      margin-bottom: -600px;
+      margin-left: -712px;
+    }
+
+    #groupSquiggle {
+      width: 100px;
+      position: relative;
+      left: 400px;
+      bottom: 50px;
     }
   }
 
@@ -204,6 +217,39 @@
       font-size: 1.125rem;
       padding: 3px 16px;
       border-radius: 10px;
+    }
+
+    #oneToOneSquiggle {
+      height: 58px;
+      position: relative;
+      margin-top: -58px;
+      margin-right: -86px;
+      left: 210px;
+    }
+
+    #eclipse1 {
+      left: 300px;
+      bottom: 300px;
+      height: 500px;
+      width: 600px;
+      margin-bottom: -500px;
+      margin-left: -600px;
+    }
+
+    #eclipse2 {
+      left: 800px;
+      bottom: 600px;
+      height: 500px;
+      width: 600px;
+      margin-bottom: -500px;
+      margin-left: -600px;
+    }
+
+    #groupSquiggle {
+      width: 85px;
+      position: relative;
+      left: 350px;
+      bottom: 50px;
     }
 
   }
