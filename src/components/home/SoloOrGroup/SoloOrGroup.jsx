@@ -63,7 +63,6 @@ export default function SoloOrGroupSection() {
                 Find out more
               </button>
             </div>
-            Û
           </div>
         </article>
         <img
