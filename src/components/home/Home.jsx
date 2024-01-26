@@ -17,7 +17,7 @@ export default function Home() {
         <ChooseYourClassSection />
         <SoloOrGroupSection />
         <ReviewsSection />
-        {/* <ArticlesPreview /> */}
+        <ArticlesPreview />
         <CallToAction />
         
       </main>
