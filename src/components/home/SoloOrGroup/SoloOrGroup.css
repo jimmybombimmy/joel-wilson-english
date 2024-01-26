@@ -5,12 +5,6 @@
   overflow: hidden;
 }
 
-#oneToOneSection {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  margin: 0 auto 100px;
-}
-
 #eclipse1 {
   position: relative;
   z-index: -1;
@@ -30,9 +24,10 @@
 #oneToOneImg {
   width: var(--soloOrGroupBoxWidth);
   /* height: 492px; */
-  display: inline-block;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
+
+  /* display in media as soloOrGroupImgs (hidden below 991px) */
 }
 
 #oneToOneInfo {
@@ -46,20 +41,13 @@
   position: relative;
 }
 
-#oneToOneContainer {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
 .soloOrGroupTitle {
   font-weight: 500;
 
   /* size in media */
 }
 
-#oneToOneParagraph {
+.soloOrGroupParagraph {
   padding-left: 3px;
   line-height: 160%;
   max-width: 70ch;
@@ -88,10 +76,11 @@
 #groupImg {
   width: var(--soloOrGroupBoxWidth);
   /* height: 492px; */
-  display: inline-block;
   grid-column: 2 / 3;
   grid-row: 1 / 2;
   justify-self: right;
+
+  /* display in media as soloOrGroupImgs (hidden below 991px) */
 }
 
 #groupInfo {
@@ -104,21 +93,33 @@
   position: relative;
 }
 
-#groupContainer {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-#groupParagraph {
-  padding-left: 3px;
-  line-height: 160%;
-  max-width: 70ch;
-  font-size: 1.125rem;
-}
-
 @media (min-width: 992px) {
+
+  #oneToOneSection {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 0 auto 100px;
+  }
+
+  #oneToOneContainer {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  #groupContainer {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+
+  .soloOrGroupImgs {
+    display: inline-block;
+  }
+
   @media (min-width: 1400px) {
     #soloOrGroupSection {
       padding: 0 60px;
@@ -138,13 +139,10 @@
       margin-bottom: 8px;
     }
 
-    #oneToOneParagraph {
+    .soloOrGroupParagraph {
       font-size: 1.125rem;
     }
 
-    #groupParagraph {
-      font-size: 1.125rem;
-    }
 
     .lessonButtons {
       font-size: 1.3rem;
@@ -205,11 +203,7 @@
       margin-bottom: 16px;
     }
 
-    #oneToOneParagraph {
-      font-size: 1rem;
-    }
-
-    #groupParagraph {
+    .soloOrGroupParagraph{
       font-size: 1rem;
     }
 
@@ -253,4 +247,86 @@
     }
 
   }
+}
+
+
+@media (max-width: 992px) {
+
+  #oneToOneSection {
+    width: 80vw;
+    margin: 0 auto;
+    padding-bottom: 120px;
+  }
+
+  #groupSection {
+    width: 80vw;
+    margin: 0 auto;
+    padding-bottom: 120px;
+    text-align: right;
+  }
+
+  .soloOrGroupContainer {
+    width: 500px;
+  }
+
+  #groupContainer {
+    width: 500px;
+    position: relative;
+    left: calc(80vw - 500px)
+  }
+
+  .soloOrGroupTitle {
+    font-size: 3.5rem;
+  }
+
+  .soloOrGroupParagraph {
+    font-size: 1.125rem;
+  }
+
+  .lessonButtons {
+    font-size: 1.125rem;
+    padding: 3px 16px;
+    border-radius: 10px;
+  }
+
+  .groupButtons {
+    position: relative;
+    left: 40px;
+  }
+
+  #groupSquiggle {
+    width: 100px;
+    position: relative;
+    left: -250px;
+    top: 250px;
+  }
+
+  #eclipse1 {
+    left: 30vw;
+    height: 500px;
+    width: 600px;
+    margin-bottom: -500px;
+    margin-left: -600px;
+  }
+
+  #eclipse2 {
+    left: 130vw;
+    bottom: 400px;
+    height: 500px;
+    width: 600px;
+    margin-bottom: -500px;
+    margin-left: -600px;
+  }
+
+  #oneToOneSquiggle {
+    height: 70px;
+    position: relative;
+    margin-top: -70px;
+    margin-right: -104px;
+    top: 20px;
+    left: 400px;
+  }
+ 
+
+
 }

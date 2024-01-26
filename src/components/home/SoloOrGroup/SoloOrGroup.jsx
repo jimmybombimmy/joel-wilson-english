@@ -1,4 +1,5 @@
 import "./SoloOrGroup.css"
+import "../../App.css"
 import { eclipse1, oneToOneImg, oneToOneSquiggle, groupImg, groupSquiggle, eclipse2 } from "../../../assets/home/home-images";
 
 
@@ -9,15 +10,15 @@ export default function SoloOrGroupSection() {
         <img id="eclipse1" src={eclipse1} alt="" />
         <img
           id="oneToOneImg"
-          className="soloOrGroupImgs"
+          className="soloOrGroupImgs hideBelow991"
           src={oneToOneImg}
-          alt=""
+          alt="One to one class image"
         />
         <article id="oneToOneInfo">
-          <div id="oneToOneContainer">
+          <div id="oneToOneContainer" className="soloOrGroupContainer">
             <img id="oneToOneSquiggle" src={oneToOneSquiggle} alt="" />
             <h2 id="oneToOneTitle" className="soloOrGroupTitle">One to one</h2>
-            <p id="oneToOneParagraph">
+            <p id="oneToOneParagraph" className="soloOrGroupParagraph">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -32,21 +33,21 @@ export default function SoloOrGroupSection() {
         <article id="groupInfo">
           <div id="groupContainer">
             <h2 id="groupTitle" className="soloOrGroupTitle">In a group</h2>
-            <p id="groupParagraph">
+            <p id="groupParagraph" className="soloOrGroupParagraph">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex ea commodo consequat.{" "}
             </p>
-            <button className="lessonButtons heroButton2">Book a lesson</button>
-            <button className="lessonButtons heroButton1">Find out more</button>
+            <button className="lessonButtons heroButton2 groupButtons">Book a lesson</button>
+            <button className="lessonButtons heroButton1 groupButtons">Find out more</button>
           </div>
         </article>
         <img
           id="groupImg"
-          className="soloOrGroupImgs"
+          className="soloOrGroupImgs hideBelow991"
           src={groupImg}
-          alt=""
+          alt="Group class image"
         />
         <img id="groupSquiggle" src={groupSquiggle} alt="" />
         <img id="eclipse2" src={eclipse2} alt="" />
