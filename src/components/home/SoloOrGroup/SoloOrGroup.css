@@ -265,20 +265,6 @@
     text-align: right;
   }
 
-  .soloOrGroupContainer {
-    width: 500px;
-  }
-
-  #groupContainer {
-    width: 500px;
-    position: relative;
-    left: calc(80vw - 500px)
-  }
-
-  .soloOrGroupTitle {
-    font-size: 3.5rem;
-  }
-
   .soloOrGroupParagraph {
     font-size: 1.125rem;
   }
@@ -289,33 +275,11 @@
     border-radius: 10px;
   }
 
-  .groupButtons {
-    position: relative;
-    left: 40px;
-  }
-
   #groupSquiggle {
     width: 100px;
     position: relative;
-    left: -250px;
-    top: 250px;
-  }
 
-  #eclipse1 {
-    left: 30vw;
-    height: 500px;
-    width: 600px;
-    margin-bottom: -500px;
-    margin-left: -600px;
-  }
-
-  #eclipse2 {
-    left: 130vw;
-    bottom: 400px;
-    height: 500px;
-    width: 600px;
-    margin-bottom: -500px;
-    margin-left: -600px;
+    /* position in media */
   }
 
   #oneToOneSquiggle {
@@ -323,10 +287,123 @@
     position: relative;
     margin-top: -70px;
     margin-right: -104px;
-    top: 20px;
-    left: 400px;
-  }
- 
 
+    /* position in media */
+  }
+
+  @media (min-width: 768px) and (max-width: 996px) {
+
+    .soloOrGroupContainer {
+      width: 500px;
+    }
+  
+    #groupContainer {
+      width: 500px;
+      position: relative;
+      left: calc(80vw - 500px)
+    }
+
+    .groupButtons {
+      position: relative;
+      left: 40px;
+    }
+
+    #oneToOneSquiggle {
+      top: 20px;
+      left: 400px;
+    }
+
+    #eclipse1 {
+      left: 30vw;
+      height: 500px;
+      width: 600px;
+      margin-bottom: -500px;
+      margin-left: -600px;
+    }
+  
+    #eclipse2 {
+      left: 130vw;
+      bottom: 400px;
+      height: 500px;
+      width: 600px;
+      margin-bottom: -500px;
+      margin-left: -600px;
+    }
+
+    #groupSquiggle {
+      left: -250px;
+      top: 250px;
+    }
+  
+
+    .soloOrGroupTitle {
+      font-size: 3.5rem;
+    }
+
+
+  }
+
+  @media (max-width: 768px) {
+    #soloOrGroupSection {
+      margin-top: 0px;
+    }
+
+    #oneToOneSection {
+      text-align: center;
+    }
+
+    #groupSection {
+      text-align: center;
+    }
+
+    #groupInfo {
+      width: 200%;
+    }
+    
+    .soloOrGroupTitle {
+      font-size: 3rem;
+    }
+
+    .lessonButtonsGroup {
+      width: 150%;
+      position: relative;
+      right: 25%
+    }
+
+    .lessonButtons {
+      margin: 20px 10px 0
+    }
+
+
+    #oneToOneSquiggle {
+      top: 20px;
+      left: 100px;
+    }
+
+    #eclipse1 {
+      left: 0;
+      height: 400px;
+      width: 480px;
+      margin-bottom: -400px;
+      margin-left: -480px;
+    }
+  
+    #eclipse2 {
+      left: calc(80vw - 160px);
+      bottom: 450px;
+      height: 400px;
+      width: 480px;
+      margin-bottom: -400px;
+      /* margin-left: -480px; */
+      justify-content: right;
+    }
+
+    #groupSquiggle {
+      position: relative;
+      left: 1000px;
+      top: 250px;
+    }
+
+  }
 
 }
