@@ -6,11 +6,12 @@ export default function ArticlesPreview() {
   return (
     <section id="articlesPreviewSection">
       <section id="articlesPreviewTop">
-        <h2 id="articlesSectionTitle">Learning Materials</h2>
+        <h2 id="articleSectionTitle">Learning Materials</h2>
         <button id="viewArticlesButton">View All Articles</button>
       </section>
       <section id="threeArticles">
           {ARTICLES.map((article) => {
+
             
             return (
                 <div className="article" key={article.title.replace(/\W+/g, '').toLowerCase()}>

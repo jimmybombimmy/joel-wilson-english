@@ -1,7 +1,7 @@
 #articlesPreviewSection {
   margin: 100px auto;
   padding: 0 50px;
-  max-width: 1200px
+  max-width: 1200px;
 }
 
 #articlesPreviewTop {
@@ -13,29 +13,23 @@
 
 #articleSectionTitle {
   display: inline-block;
-  font-size: 3.75rem;
   font-weight: 400;
   margin: 0;
+
+  /* font size in media */
 }
 
 #viewArticlesButton {
   display: inline-block;
-  font-size: 1.5rem;
   font-weight: 600;
   color: white;
   background-color: #0A4D78;
   border: 0px;
   padding: 3px 15px;
   height: 100%;
-  border-radius: 15px;
-}
 
-#threeArticles {
-  display: flex;
-  align-items: top;
-  justify-content: space-between;
-  margin-top: 30px;
-  
+  /* font size in media */
+  /* border-radius in media */
 }
 
 .article {
@@ -50,8 +44,9 @@
 .articlePrevImg {
   display: inline-block;
   width: var(--articlePrevWidth);
-  height: 200px;
-  border-radius: 20px 20px 0 0;
+
+  /* height in media */
+  /* border radius in media */
 
 }
 
@@ -74,10 +69,34 @@
 
 @media (min-width: 992px) {
 
+  #threeArticles {
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+    margin-top: 30px; 
+  }
+
+  .articlePrevImg {
+    border-radius: 20px 20px 0 0;
+  }
+
   @media (min-width: 1400px) {
+
+    #articleSectionTitle {
+      font-size: 3.75rem;
+    }
+
+    #viewArticlesButton {
+      font-size: 1.5rem;
+      border-radius: 15px;
+    }
 
     .article {
       --articlePrevWidth: 320px;
+    }
+
+    .articlePrevImg {
+      height: 200px;
     }
 
     .articlePrevTitle {
@@ -98,8 +117,22 @@
   }
 
   @media (max-width: 1399px) {
+
+    #articleSectionTitle {
+      font-size: 3rem;
+    }
+
+    #viewArticlesButton {
+      font-size: 1.125rem;
+      border-radius: 10px;
+    }
+
     .article {
       --articlePrevWidth: 280px;
+    }
+
+    .articlePrevImg {
+      height: 170px;
     }
 
     .articlePrevTitle {
@@ -116,6 +149,56 @@
     .articlePrevText {
       padding: 20px 20px 32px;
     }
+  }
+
+}
+
+
+@media (max-width: 991px) {
+
+  #articleSectionTitle {
+    font-size: 3rem;
+  }
+
+  #viewArticlesButton {
+    font-size: 1.2rem;
+    border-radius: 10px;
+  }
+
+  #threeArticles {
+    width: 100%;
+    margin-top: 30px; 
+    
+  }
+
+  .article {
+    height: 250px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: auto;
+    margin-bottom: 50px;
+    border-radius: 20px;
+
+    border: 1px solid rgb(216, 215, 215);
+  }
+
+  .articlePrevImg {
+    grid-column: 1/2;
+    width: 100%;
+    border-radius: 20px 0 0 20px;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .articlePrevText {
+    margin: 0 20px 0 30px;
+    align-self: center;
+  }
+
+  .articlePrevTitle {
+    font-size: 1.7rem;
+    margin-bottom: 12px;
   }
 
 }
