@@ -18,7 +18,7 @@ export default function CallToAction() {
             Find out more
           </button>
         </div>
-        <img id="callToActionImg" src={michaelFranks} alt="" />
+        <img id="callToActionImg" className="hideBelow991" src={michaelFranks} alt="" />
       </section>
       <section id="footerIntoCTA"></section>
     </>
