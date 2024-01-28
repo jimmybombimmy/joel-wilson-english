@@ -1,11 +1,12 @@
 #footerSection {
-  color: #0A4D78;
-  background: #EFF8FA;
+  color: #0a4d78;
+  background: #eff8fa;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   padding: 50px 10% 80px;
   justify-items: center;
-  width: 100%
+  width: 100%;
+  gap: 20px;
 }
 
 #footerSection div {
@@ -13,7 +14,7 @@
 }
 
 .footerList {
-  padding: 0
+  padding: 0;
 }
 
 .footerList li {
@@ -25,7 +26,6 @@
   margin-bottom: 20px;
 }
 
-
 .social {
   padding-bottom: 3px;
 }
@@ -36,3 +36,9 @@
   margin-right: 12px;
 }
 
+@media (max-width: 577px) {
+  #footerSection {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: left;
+  }
+}
