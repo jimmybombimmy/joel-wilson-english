@@ -7,7 +7,7 @@ export default function ArticlesPreview() {
     <section id="articlesPreviewSection">
       <section id="articlesPreviewTop">
         <h2 id="articleSectionTitle">Learning Materials</h2>
-        <button id="viewArticlesButton">View All Articles</button>
+        <button id="viewArticlesButton">View All</button>
       </section>
       <section id="threeArticles">
           {ARTICLES.map((article) => {
