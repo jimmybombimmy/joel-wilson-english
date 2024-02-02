@@ -32,7 +32,7 @@
   margin-right: 20px;
   color: white;
   border-radius: 10px;
-  padding: 3px 15px;
+  padding: 3px 15px 6px;
   border: none;
   font-weight: 700;
 
@@ -388,7 +388,7 @@
 
     .heroButtons {
       font-size: 1.3rem;
-      padding: 6px 16px;
+      padding: 6px 16px 8px;
       margin: 20px 3%;
       border-radius: 5px;
       width: 94%;
