@@ -13,6 +13,7 @@
   line-height: 100%;
   letter-spacing: 1px;
   color: #0a4d78;
+  font-weight: 700;
 
   /* margin-bottom in media */
   /* font-size in media */
@@ -30,10 +31,10 @@
   margin-top: 40px;
   margin-right: 20px;
   color: white;
-  font-weight: 500;
   border-radius: 10px;
   padding: 3px 15px;
   border: none;
+  font-weight: 700;
 
   /* font-size in media */
 }
@@ -151,11 +152,11 @@
     }
 
     #heroLeft {
-      margin-left: 60px;
+      margin-left: 30px;
     }
 
     #learnUnderline {
-      bottom: 95px;
+      bottom: 90px;
       left: 172px;
       width: 170px;
     }
@@ -167,7 +168,7 @@
     }
 
     #heroTitle {
-      font-size: 4.5rem;
+      font-size: 4.4rem;
       margin-bottom: 8px;
     }
 
@@ -206,7 +207,7 @@
     }
 
     #heroLeft {
-      margin-left: 40px;
+      margin-left: 0px;
     }
 
     #triangleArrows {
@@ -220,8 +221,8 @@
     }
 
     #learnUnderline {
-      bottom: 74px;
-      left: 138px;
+      bottom: 70px;
+      left: 145px;
       width: 150px;
     }
 
@@ -302,8 +303,8 @@
     }
 
     #learnUnderline {
-      right: 28px;
-      bottom: 62px;
+      right: 30px;
+      bottom: 58px;
       width: 115px;
     }
 
@@ -339,7 +340,7 @@
       width: 100px;
     }
 
-    @media (max-width: 624px) {
+    @media (max-width: 636px) {
       #learnUnderline {
         right: 26px;
         bottom: 56px;
@@ -347,7 +348,7 @@
       }
     }
 
-    @media (max-width: 425px) {
+    @media (max-width: 432px) {
       #learnUnderline {
         left: 52px;
         bottom: 56px;
@@ -355,7 +356,7 @@
       }
     }
 
-    @media (max-width: 405px) {
+    @media (max-width: 411px) {
       #learnUnderline {
         left: 52px;
         bottom: 100px;
