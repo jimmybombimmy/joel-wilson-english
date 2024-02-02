@@ -38,10 +38,26 @@
   margin-right: 40px;
 }
 
+#callToActionBookButton:hover {
+  background-color: #e0e0e0;
+  border: 3px solid #e0e0e0;
+  animation-duration: 3.5s;
+  animation-name: buttonmove;
+  animation-duration: 20s;
+}
+
 #callToActionInfoButton {
   color: #f5f5f5;
   background: rgb(0,0,0,0);
   border: 3px solid #f5f5f5;
+}
+
+#callToActionInfoButton:hover {
+  color: #e0e0e0;
+  border: 3px solid #e0e0e0;
+  animation-duration: 3.5s;
+  animation-name: buttonmove;
+  animation-duration: 20s;
 }
 
 #footerIntoCTA {

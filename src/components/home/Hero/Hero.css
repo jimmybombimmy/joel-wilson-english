@@ -38,12 +38,43 @@
   /* font-size in media */
 }
 
+.heroButtons:hover {
+  animation-duration: 3.5s;
+  animation-name: buttonmove;
+  animation-duration: 20s;
+}
+
+@keyframes buttonmove {
+  0% {
+      transform: translateY(0px) translateX(0px);
+      box-shadow: 0 rgba(0,0,0,.0);
+  }
+
+  1% {
+      transform: translateY(-2px) translateX(-2px);
+      box-shadow: 1px 1px 3px 1px rgba(0,0,0,.45);
+  }
+
+  100% {
+      transform: translateY(-2px) translateX(-2px);
+      box-shadow: 1px 1px 3px 1px rgba(0,0,0,.45);
+  }
+}
+
 .heroButton1 {
   background-color: #f0a050;
 }
 
+.heroButton1:hover {
+  background-color: #c47a2b;
+}
+
 .heroButton2 {
   background-color: #0a4d78;
+}
+
+.heroButton2:hover {
+  background-color: #073a5b;
 }
 
 @media (min-width: 992px) {
@@ -217,7 +248,6 @@
 }
 
 @media (max-width: 991px) {
-
   #joelLinkedIn {
     border-radius: 50%;
 
@@ -244,7 +274,7 @@
 
   .heroParagraph {
     text-align: center;
-    padding: 5px 10%
+    padding: 5px 10%;
 
     /* size in media */
   }
@@ -347,11 +377,9 @@
     .heroButtons {
       font-size: 1.3rem;
     }
-
   }
 
   @media (max-width: 576px) {
-
     #joelLinkedIn {
       width: 30%;
       margin: 30px 35%;

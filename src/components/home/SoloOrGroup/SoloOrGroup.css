@@ -67,6 +67,12 @@
   /* border-radius in media */
 }
 
+.lessonButtons:hover {
+  animation-duration: 3.5s;
+  animation-name: buttonmove; /* as found in Hero.css */
+  animation-duration: 20s;
+}
+
 #groupSection {
   display: grid;
   grid-template-columns: 50% 50%;
