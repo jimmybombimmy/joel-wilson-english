@@ -12,7 +12,7 @@ function App() {
     <Navbar expand="lg"/>
     <Routes>
       <Route path="/" element={<Home />}></Route>
-      <Route path="/secret-article-test-page" element={<ArticleTest />}></Route>
+      <Route path="/secret-article-test-page/:id" element={<ArticleTest />}></Route>
     </Routes>
     <Footer />
     </>
