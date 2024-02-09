@@ -1,0 +1,44 @@
+#introSection {
+  background-color: lightgrey;
+  padding: 80px 110px;
+  justify-content: center;
+  display: flex;
+}
+
+#introInner {
+  height: 500px;
+  width: 1250px;
+  display: flex;
+  
+}
+
+#introInfo {
+  width: 60%;
+  align-self: center;
+}
+
+
+#introTitle {
+  font-size: 3.5rem;
+  margin-bottom: 8px;
+  font-weight: 700;
+  position: relative;
+  right: 3px;
+}
+
+#introParagraphs {
+  font-size: 1.3rem;
+}
+
+#introParagraphs > p {
+  margin-top: 30px;
+}
+
+#introTestemonials {
+  width: 40%;
+  height: 500px;
+}
+
+.introReview {
+  width: 100%;
+}

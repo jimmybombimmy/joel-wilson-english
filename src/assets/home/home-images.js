@@ -120,5 +120,54 @@ const reviewsArray = [
   review44
 ];
 
+const reviewsArrayFirstHalf = [
+  review1,
+  review2,
+  review3,
+  review4,
+  review5,
+  review6,
+  review7,
+  review8,
+  review9,
+  review10,
+  review11,
+  review12,
+  review13,
+  review14,
+  review15,
+  review16,
+  review17,
+  review18,
+  review19,
+  review20,
+  review21,
+  review22,
+]
 
-export { michaelInABox, learnUnderline, wavyArrows, triangleArrows, grammarBubble, speakBubble, vocabBubble, leftDots, middleDots, rightDots, leftStar, middleStar, rightStar, oneToOneImg, groupImg, oneToOneSquiggle, groupSquiggle, eclipse1, eclipse2, reviewsArray, reviewsCircle, reviewsDots, reviewsLoop, michaelFranks, joelLinkedIn, grammarBubbleReverse, speakBubbleReverse, vocabBubbleReverse };
+const reviewsArraySecondHalf = [
+  review23,
+  review24,
+  review25,
+  review26,
+  review27,
+  review28,
+  review29,
+  review30,
+  review31,
+  review32,
+  review33,
+  review34,
+  review35,
+  review36,
+  review37,
+  review38,
+  review39,
+  review40,
+  review41,
+  review42,
+  review43,
+  review44
+]
+
+export { michaelInABox, learnUnderline, wavyArrows, triangleArrows, grammarBubble, speakBubble, vocabBubble, leftDots, middleDots, rightDots, leftStar, middleStar, rightStar, oneToOneImg, groupImg, oneToOneSquiggle, groupSquiggle, eclipse1, eclipse2, reviewsArray, reviewsCircle, reviewsDots, reviewsLoop, michaelFranks, joelLinkedIn, grammarBubbleReverse, speakBubbleReverse, vocabBubbleReverse, reviewsArrayFirstHalf, reviewsArraySecondHalf };
