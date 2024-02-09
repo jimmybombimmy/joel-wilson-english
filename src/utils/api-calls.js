@@ -7,3 +7,7 @@ const strapi = axios.create({
 export const getTestArticleById = (id) => {
   return strapi.get(`/articles/${id}`)
 }
+
+export const getAllImageData = () => {
+  return strapi.get('/upload/files')
+}

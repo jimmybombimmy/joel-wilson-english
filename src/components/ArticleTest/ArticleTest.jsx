@@ -1,9 +1,11 @@
 import { useParams } from "react-router-dom";
-import { getTestArticleById } from "../../utils/api-calls";
+import { getTestArticleById, getAllImageData } from "../../utils/api-calls";
+import { convertTimestampToDate } from "../../utils/utils";
 import { useState, useEffect } from "react";
 
 export default function ArticleTest() {
   const [articleData, setArticleData] = useState(false);
+  const [imageData, setImageData] = useState(false)
   const bodyMap = ["body1", "body2", "body3", "body4"];
 
   const { id } = useParams();
@@ -12,9 +14,16 @@ export default function ArticleTest() {
     if (!articleData) {
       getTestArticleById(id).then(({ data }) => {
         return setArticleData(data.data.attributes);
-      });
+      })
     }
-  }, [articleData]);
+
+    if (!imageData) {
+      getAllImageData().then(({data}) => {
+        return setImageData(data)
+      })
+    }
+    
+  }, []);
 
   function textRetrieval(text, bold, italic, underline, strikethrough, type) {
     let textReturn = text;
@@ -31,14 +40,12 @@ export default function ArticleTest() {
       textReturn = <s>{textReturn}</s>;
     }
     if (type) {
-      console.log("list");
       textReturn = <li>{textReturn}</li>;
     }
     return textReturn;
   }
 
   function articleSegment(section) {
-    console.log("section", section);
     let textMap = section.children.map((text) => {
       return textRetrieval(
         text.text,
@@ -88,24 +95,22 @@ export default function ArticleTest() {
         return <ol>{listMap}</ol>
       }
     } else if (section.type === "image") {
-
+      console.log(section.image.url)
       return <img src={section.image.url} alt={section.image.alternativeText} />
     }
   }
 
+  console.log(articleData.updatedAt)
+
   return (
     <div>
       <h1>{articleData.title ? articleData.title : "waiting for article"}</h1>
-      <p>Article created at PUT TIME HERE</p>
-      <img src="" alt="" />
+      <p>{articleData ? `Article created on ${convertTimestampToDate(articleData.updatedAt)}` : "shit"}</p>
       {articleData ? (
         bodyMap.map((body) => {
           return articleData[body] ? (
             articleData[body].map((paragraph) => {
               return articleSegment(paragraph);
-              // return (<p>{paragraph.children.map(text => {
-              //   return (text.bold ? (<strong>{text.text}</strong>) : text.text)
-              // })}</p>)
             })
           ) : (
             <p>No text in this part of the section</p>
