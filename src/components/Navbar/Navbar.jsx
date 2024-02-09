@@ -25,7 +25,7 @@ function NavFile({expand}) {
     <nav>
         <Navbar key={expand} expand={expand} className="bg-body-tertiary mb-3">
           <Container fluid>
-            <Navbar.Brand href="#">Joel Wilson English</Navbar.Brand>
+            <Navbar.Brand href="/">Joel Wilson English</Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
@@ -39,8 +39,8 @@ function NavFile({expand}) {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link href="#action1">About Me</Nav.Link>
-                  <Nav.Link href="#action2">Learning Materials</Nav.Link>
+                  <Nav.Link href="/about">About Me</Nav.Link>
+                  <Nav.Link href="/articles">Learning Materials</Nav.Link>
                   <NavDropdown
                     title="Classes"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
@@ -48,8 +48,8 @@ function NavFile({expand}) {
                     onMouseEnter={showDropdown}
                     onMouseLeave={hideDropdown}
                   >
-                    <NavDropdown.Item href="#action3">One to One</NavDropdown.Item>
-                    <NavDropdown.Item href="#action4">
+                    <NavDropdown.Item href="/one-to-one-classes">One to One</NavDropdown.Item>
+                    <NavDropdown.Item href="/group-classes">
                       Group
                     </NavDropdown.Item>
                   </NavDropdown>
