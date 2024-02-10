@@ -1,11 +1,10 @@
 import { useParams } from "react-router-dom";
-import { getTestArticleById, getAllImageData } from "../../utils/api-calls";
+import { getTestArticleById } from "../../utils/api-calls";
 import { convertTimestampToDate } from "../../utils/utils";
 import { useState, useEffect } from "react";
 
 export default function ArticleTest() {
   const [articleData, setArticleData] = useState(false);
-  const [imageData, setImageData] = useState(false)
   const bodyMap = ["body1", "body2", "body3", "body4"];
 
   const { id } = useParams();
@@ -14,12 +13,6 @@ export default function ArticleTest() {
     if (!articleData) {
       getTestArticleById(id).then(({ data }) => {
         return setArticleData(data.data.attributes);
-      })
-    }
-
-    if (!imageData) {
-      getAllImageData().then(({data}) => {
-        return setImageData(data)
       })
     }
     
@@ -46,6 +39,8 @@ export default function ArticleTest() {
   }
 
   function articleSegment(section) {
+    // console.log(section)
+    console.log(section)
     let textMap = section.children.map((text) => {
       return textRetrieval(
         text.text,
@@ -94,9 +89,10 @@ export default function ArticleTest() {
       } else if (section.format === "ordered") {
         return <ol>{listMap}</ol>
       }
-    } else if (section.type === "image") {
-      console.log(section.image.url)
-      return <img src={section.image.url} alt={section.image.alternativeText} />
+    } 
+    else if (typeof section === 'string') {
+      console.log("i found an image", section)
+      return <img src={section} alt={section} />
     }
   }
 
@@ -108,6 +104,7 @@ export default function ArticleTest() {
       <p>{articleData ? `Article created on ${convertTimestampToDate(articleData.updatedAt)}` : "shit"}</p>
       {articleData ? (
         bodyMap.map((body) => {
+          console.log(body)
           return articleData[body] ? (
             articleData[body].map((paragraph) => {
               return articleSegment(paragraph);
