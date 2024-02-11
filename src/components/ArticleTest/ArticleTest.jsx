@@ -49,8 +49,6 @@ export default function ArticleTest() {
   }
 
   function articleSegment(section) {
-    // console.log(section)
-    console.log(section);
     let textMap = section.children.map((text) => {
       return textRetrieval(
         text.text,
@@ -102,9 +100,8 @@ export default function ArticleTest() {
       } else if (section.format === "ordered") {
         return <ol>{listMap}</ol>;
       }
-    } else if (typeof section === "string") {
-      console.log("i found an image", section);
-      return <img src={section} alt={section} />;
+    } else if (section.type === "quote") {
+      return <p className="articleQuote">{textMap}</p>
     }
   }
 
@@ -121,18 +118,19 @@ export default function ArticleTest() {
       {articleData ? (
         bodyMap.map((body) => {        
           if (body.slice(0,3) === "img") {
-            return <img src={articleData[body]} />
+            if (articleData[body]) {
+              return <img src={articleData[body]} alt={articleData[`alt${body.slice(3)}`]} />
+            }
           } else {
             return articleData[body] ? (
               articleData[body].map((paragraph) => {
-                console.log(typeof paragraph);
                 if (typeof paragraph === "string") {
                   return;
                 }
                 return articleSegment(paragraph);
               })
             ) : (
-              <p>No text in this part of the section</p>
+              <></>
             );
           }
         })
