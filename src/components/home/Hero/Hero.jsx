@@ -1,4 +1,4 @@
-import "../Hero/Hero.css";
+import "./Hero.css";
 import {
   triangleArrows,
   learnUnderline,
