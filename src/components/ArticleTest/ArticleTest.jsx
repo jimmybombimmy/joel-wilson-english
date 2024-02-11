@@ -5,7 +5,18 @@ import { useState, useEffect } from "react";
 
 export default function ArticleTest() {
   const [articleData, setArticleData] = useState(false);
-  const bodyMap = ["body1", "body2", "body3", "body4"];
+  const bodyMap = [
+    "img1",
+    "body1",
+    "img2",
+    "body2",
+    "img3",
+    "body3",
+    "img4",
+    "body4",
+    "img5",
+    "body5",
+  ];
 
   const { id } = useParams();
 
@@ -13,9 +24,8 @@ export default function ArticleTest() {
     if (!articleData) {
       getTestArticleById(id).then(({ data }) => {
         return setArticleData(data.data.attributes);
-      })
+      });
     }
-    
   }, []);
 
   function textRetrieval(text, bold, italic, underline, strikethrough, type) {
@@ -40,7 +50,7 @@ export default function ArticleTest() {
 
   function articleSegment(section) {
     // console.log(section)
-    console.log(section)
+    console.log(section);
     let textMap = section.children.map((text) => {
       return textRetrieval(
         text.text,
@@ -52,17 +62,20 @@ export default function ArticleTest() {
       );
     });
     let listMap = section.children.map((item) => {
-      
       if (item.type === "list-item") {
         return item.children.map((text) => {
-          return <li>{textRetrieval(
-            text.text,
-            text.bold,
-            text.italic,
-            text.underline,
-            text.strikethrough,
-            text.type === "list-item"
-          )}</li>;
+          return (
+            <li>
+              {textRetrieval(
+                text.text,
+                text.bold,
+                text.italic,
+                text.underline,
+                text.strikethrough,
+                text.type === "list-item"
+              )}
+            </li>
+          );
         });
       }
     });
@@ -85,33 +98,43 @@ export default function ArticleTest() {
       return <p>{textMap}</p>;
     } else if (section.type === "list") {
       if (section.format === "unordered") {
-        return <ul>{listMap}</ul>
+        return <ul>{listMap}</ul>;
       } else if (section.format === "ordered") {
-        return <ol>{listMap}</ol>
+        return <ol>{listMap}</ol>;
       }
-    } 
-    else if (typeof section === 'string') {
-      console.log("i found an image", section)
-      return <img src={section} alt={section} />
+    } else if (typeof section === "string") {
+      console.log("i found an image", section);
+      return <img src={section} alt={section} />;
     }
   }
-
-  console.log(articleData.updatedAt)
 
   return (
     <div>
       <h1>{articleData.title ? articleData.title : "waiting for article"}</h1>
-      <p>{articleData ? `Article created on ${convertTimestampToDate(articleData.updatedAt)}` : "shit"}</p>
+      <p>
+        {articleData
+          ? `Article created on ${convertTimestampToDate(
+              articleData.updatedAt
+            )}`
+          : ""}
+      </p>
       {articleData ? (
-        bodyMap.map((body) => {
-          console.log(body)
-          return articleData[body] ? (
-            articleData[body].map((paragraph) => {
-              return articleSegment(paragraph);
-            })
-          ) : (
-            <p>No text in this part of the section</p>
-          );
+        bodyMap.map((body) => {        
+          if (body.slice(0,3) === "img") {
+            return <img src={articleData[body]} />
+          } else {
+            return articleData[body] ? (
+              articleData[body].map((paragraph) => {
+                console.log(typeof paragraph);
+                if (typeof paragraph === "string") {
+                  return;
+                }
+                return articleSegment(paragraph);
+              })
+            ) : (
+              <p>No text in this part of the section</p>
+            );
+          }
         })
       ) : (
         <p>Waiting for section</p>
