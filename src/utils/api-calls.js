@@ -7,3 +7,7 @@ const strapi = axios.create({
 export const getTestArticleById = (id) => {
   return strapi.get(`/article-tests/${id}`)
 }
+
+export const getTestArticles = () => {
+  return strapi.get(`/article-tests`)
+}
