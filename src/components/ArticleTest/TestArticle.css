@@ -14,6 +14,7 @@
 
 #articleContainer > * {
   max-width: 100%;
+  overflow-wrap:break-word;
 }
 
 #articleTitle {
@@ -50,13 +51,21 @@
   font-size: 1.3rem;
   width: 100%;
   display: block;
-  width: max-content; 
+  /* width: max-content;  */
+  /* height: min-content; */
 }
 
 .pullQuote {
   margin: 25px;
   width: 30%;
+}
+
+.floatLeft {
   float: left;
+}
+
+.floatRight {
+  float: right;
 }
 
 .articleQuote {
@@ -70,6 +79,11 @@
   align-items: center;
   text-align: center;
   padding: 25px;
+  flex-direction: column;
+  justify-content: center;
   margin-bottom: 0;
 }
 
+.articleQuote > p {
+  margin-bottom: 0;
+}

@@ -20,6 +20,8 @@ export default function TestArticle() {
     "body5",
   ];
 
+  let pullQuoteCount = 0
+
   const { id } = useParams();
 
   useEffect(() => {
@@ -50,7 +52,7 @@ export default function TestArticle() {
     return textReturn;
   }
 
-  function articleSegment(section) {
+  function articleSegment(section, sectionName) {
     let textMap = section.children.map((text) => {
       return textRetrieval(
         text.text,
@@ -103,8 +105,14 @@ export default function TestArticle() {
         return <ol className="articleText">{listMap}</ol>;
       }
     } else if (section.type === "quote") {
-      console.log(textMap)
-      return <aside className="pullQuote"><blockquote><p className="articleQuote" style={{fontSize: textMap[0].length < 100 ? "1.5rem" : "1.3rem"}}>{textMap}</p></blockquote></aside>
+      let floatie;
+      if (pullQuoteCount % 2 === 0) {
+        floatie = 'floatLeft'
+      } else {
+        floatie = 'floatRight'
+      }
+      pullQuoteCount++
+      return <aside className={`pullQuote ${floatie}`}><blockquote className="articleQuote"><p  style={{fontSize: textMap[0].length < 100 ? "1.5rem" : "1.3rem"}}>{textMap}</p></blockquote></aside>
     }
   }
 
@@ -131,7 +139,7 @@ export default function TestArticle() {
                 if (typeof paragraph === "string") {
                   return;
                 }
-                return articleSegment(paragraph);
+                return articleSegment(paragraph, body);
               })
             ) : (
               <></>
