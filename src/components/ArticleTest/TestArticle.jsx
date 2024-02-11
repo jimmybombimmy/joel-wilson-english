@@ -3,6 +3,8 @@ import { getTestArticleById } from "../../utils/api-calls";
 import { convertTimestampToDate } from "../../utils/utils";
 import { useState, useEffect } from "react";
 
+import "./TestArticle.css"
+
 export default function TestArticle() {
   const [articleData, setArticleData] = useState(false);
   const bodyMap = [
@@ -80,37 +82,39 @@ export default function TestArticle() {
 
     if (section.type === "heading") {
       if (section.level === 1) {
-        return <h1>{textMap}</h1>;
+        return <h1 className="articleheader">{textMap}</h1>;
       } else if (section.level === 2) {
-        return <h2>{textMap}</h2>;
+        return <h2 className="articleheader">{textMap}</h2>;
       } else if (section.level === 3) {
-        return <h3>{textMap}</h3>;
+        return <h3 className="articleheader">{textMap}</h3>;
       } else if (section.level === 4) {
-        return <h4>{textMap}</h4>;
+        return <h4 className="articleheader">{textMap}</h4>;
       } else if (section.level === 5) {
-        return <h5>{textMap}</h5>;
+        return <h5 className="articleheader">{textMap}</h5>;
       } else if (section.level === 6) {
-        return <h6>{textMap}</h6>;
+        return <h6 className="articleheader">{textMap}</h6>;
       }
     } else if (section.type === "paragraph") {
-      return <p>{textMap}</p>;
+      return <p className="articleText">{textMap}</p>;
     } else if (section.type === "list") {
       if (section.format === "unordered") {
-        return <ul>{listMap}</ul>;
+        return <ul className="articleText">{listMap}</ul>;
       } else if (section.format === "ordered") {
-        return <ol>{listMap}</ol>;
+        return <ol className="articleText">{listMap}</ol>;
       }
     } else if (section.type === "quote") {
-      return <p className="articleQuote">{textMap}</p>
+      console.log(textMap)
+      return <aside className="pullQuote"><blockquote><p className="articleQuote" style={{fontSize: textMap[0].length < 100 ? "1.5rem" : "1.3rem"}}>{textMap}</p></blockquote></aside>
     }
   }
 
   return (
-    <div>
-      <h1>{articleData.title ? articleData.title : "waiting for article"}</h1>
-      <p>
+    <main id="articlePage">
+      <div id="articleContainer">
+      <h1 id="articleTitle">{articleData.title ? articleData.title : "Article Loading..."}</h1>
+      <p id="articleCreated">
         {articleData
-          ? `Article created on ${convertTimestampToDate(
+          ? `Created on: ${convertTimestampToDate(
               articleData.updatedAt
             )}`
           : ""}
@@ -119,7 +123,7 @@ export default function TestArticle() {
         bodyMap.map((body) => {        
           if (body.slice(0,3) === "img") {
             if (articleData[body]) {
-              return <img src={articleData[body]} alt={articleData[`alt${body.slice(3)}`]} />
+              return <div className="imgContainer"><img className="articleImg" src={articleData[body]} alt={articleData[`alt${body.slice(3)}`]} /></div>
             }
           } else {
             return articleData[body] ? (
@@ -137,6 +141,7 @@ export default function TestArticle() {
       ) : (
         <p>Waiting for section</p>
       )}
-    </div>
+      </div>
+    </main>
   );
 }
