@@ -1,10 +1,11 @@
 #articlePage {
+  width: 100vw;
   display: grid;
   padding: 80px 110px;
 }
 
 #articleContainer {
-  width: 100%;
+  width: auto;
   max-width: 1250px;
   display: block;
   justify-self: center;
@@ -35,8 +36,7 @@
 }
 
 .imgContainer {
-  width: 100%;
-  justify-content: center;
+  justify-items: center;
   display: grid;
 }
 
@@ -44,7 +44,7 @@
   max-height: 300px;
   width: auto;
   margin: 50px;
-  max-width: 100%;
+  max-width: 80%;
 }
 
 .articleText {
