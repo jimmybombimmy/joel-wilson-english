@@ -1,13 +1,11 @@
-import Carousel from "react-bootstrap/Carousel";
-
 import "./Introduction.css";
 import {
   reviewsArrayFirstHalf,
   reviewsArraySecondHalf,
 } from "../../../assets/home/home-images";
+import ImageFlash from "./ImageFlash/ImageFlash";
 
 export default function Introduction() {
-
   return (
     <section id="introSection">
       <div id="introInner">
@@ -34,13 +32,8 @@ export default function Introduction() {
           </div>
         </article>
         <section id="introTestemonials">
-          <Carousel fade>
-            {reviewsArrayFirstHalf.map((image) => {
-              return <Carousel.Item>
-                <img className="introReview" src={image} />
-                </Carousel.Item> ;
-            })}
-          </Carousel>
+          <ImageFlash imgArray={reviewsArrayFirstHalf} imgOnBottom={true}/>
+          <ImageFlash imgArray={reviewsArraySecondHalf} imgOnBottom={false}/>
         </section>
       </div>
     </section>

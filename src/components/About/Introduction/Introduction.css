@@ -1,5 +1,6 @@
 #introSection {
-  background-color: lightgrey;
+  background-color: rgb(239,248,250);
+  border: 3px solid black;
   padding: 80px 110px;
   justify-content: center;
   display: flex;
@@ -13,7 +14,7 @@
 }
 
 #introInfo {
-  width: 60%;
+  width: 50%;
   align-self: center;
 }
 
@@ -35,10 +36,24 @@
 }
 
 #introTestemonials {
-  width: 40%;
+  width: 50%;
   height: 500px;
 }
 
-.introReview {
-  width: 100%;
+.flashingReviewsContainer {
+  height: 500px;
+  width: auto;
+  position: relative;
+  display: grid;
 }
+
+.introReview {
+  position: relative;
+  width: 60%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 30px rgb(217, 231, 233)
+}
+
+/* .carousel-indicators {
+  display: none;
+} */
