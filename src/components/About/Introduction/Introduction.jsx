@@ -1,7 +1,10 @@
 import "./Introduction.css";
+import "../../App.css"
+
 import {
   reviewsArrayFirstHalf,
   reviewsArraySecondHalf,
+  reviewsArray
 } from "../../../assets/home/home-images";
 import ImageFlash from "./ImageFlash/ImageFlash";
 
@@ -31,9 +34,14 @@ export default function Introduction() {
             </p>
           </div>
         </article>
-        <section id="introTestemonials">
-          <ImageFlash imgArray={reviewsArrayFirstHalf} imgOnBottom={true}/>
-          <ImageFlash imgArray={reviewsArraySecondHalf} imgOnBottom={false}/>
+        <section id="introTestemonialsLarge" className="hideBelow991" >
+          <ImageFlash imgArray={reviewsArrayFirstHalf} imgOnBottom={true} imgMove={true} hideClass={""}/>
+          <ImageFlash imgArray={reviewsArraySecondHalf} imgOnBottom={false} imgMove={true} hideClass={""}/>
+        </section>
+
+        <section id="introTestemonialsSmall" className="hideAbove992">
+          <ImageFlash imgArray={reviewsArrayFirstHalf} imgOnBottom={false} imgMove={false} hideClass={""}/>
+          <ImageFlash imgArray={reviewsArraySecondHalf} imgOnBottom={false} imgMove={false} hideClass={"hideBelow575"}/>
         </section>
       </div>
     </section>

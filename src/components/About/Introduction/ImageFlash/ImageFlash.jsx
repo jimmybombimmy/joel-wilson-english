@@ -1,12 +1,15 @@
 import { useState } from "react";
 import { useSpring, animated } from "@react-spring/web";
 
-export default function ImageFlash({ imgArray, imgOnBottom }) {
+export default function ImageFlash({ imgArray, imgOnBottom, imgMove, hideClass }) {
+  function willImgRandomMove() {
+    return imgMove
+      ? [Math.floor(Math.random() * 41), Math.floor(Math.random() * 16)]
+      : [0, 0];
+  }
+
   const [imgNo, setImgNo] = useState(0);
-  const [randomMove, setRandomMove] = useState([
-    Math.floor(Math.random() * 41),
-    Math.floor(Math.random() * 16),
-  ]);
+  const [randomMove, setRandomMove] = useState(willImgRandomMove());
 
   const [flip, setFlip] = useState(imgOnBottom ? false : true);
   const props = useSpring({
@@ -21,10 +24,7 @@ export default function ImageFlash({ imgArray, imgOnBottom }) {
     onRest: () => {
       if (flip === true) {
         imgNo < imgArray.length - 1 ? setImgNo(imgNo + 1) : setImgNo(0);
-        setRandomMove([
-          Math.floor(Math.random() * 41),
-          Math.floor(Math.random() * 16),
-        ]);
+        setRandomMove(willImgRandomMove());
       }
       setFlip(!flip);
     },
@@ -37,15 +37,15 @@ export default function ImageFlash({ imgArray, imgOnBottom }) {
   });
 
   function pushUpImages() {
-    return !imgOnBottom ? "500px" : "0px";
+    return !imgOnBottom ? imgMove ? "500px" : "0px" : "0px" ;
   }
 
   function alignTopOrBottom() {
-    return imgOnBottom ? 'end' : 'top'
+    return imgOnBottom ? "end" : "top";
   }
 
   return (
-    <animated.div style={props}>
+    <animated.div className={hideClass} style={props}>
       <div
         className="flashingReviewsContainer"
         style={{ bottom: pushUpImages(), alignItems: alignTopOrBottom()}}

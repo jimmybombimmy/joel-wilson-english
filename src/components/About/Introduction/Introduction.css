@@ -1,59 +1,186 @@
 #introSection {
-  background-color: rgb(239,248,250);
+  background-color: rgb(239, 248, 250);
   border: 3px solid black;
-  padding: 80px 110px;
   justify-content: center;
   display: flex;
+
+  /* padding in media */
 }
 
 #introInner {
-  height: 500px;
+  
   width: 1250px;
   display: flex;
-  
+
+  /* height in media */
 }
 
 #introInfo {
-  width: 50%;
   align-self: center;
+
+  /* width in media */
 }
 
-
 #introTitle {
-  font-size: 3.5rem;
   margin-bottom: 8px;
   font-weight: 700;
   position: relative;
   right: 3px;
-}
 
-#introParagraphs {
-  font-size: 1.3rem;
-}
-
-#introParagraphs > p {
-  margin-top: 30px;
-}
-
-#introTestemonials {
-  width: 50%;
-  height: 500px;
+  /* font-size in media */
 }
 
 .flashingReviewsContainer {
-  height: 500px;
   width: auto;
   position: relative;
   display: grid;
+
+  /* height in media */
 }
 
 .introReview {
   position: relative;
-  width: 60%;
+  max-width: 60%;
   border-radius: 10px;
-  box-shadow: 0px 0px 30px rgb(217, 231, 233)
+  box-shadow: 0px 0px 30px rgb(217, 231, 233);
 }
 
-/* .carousel-indicators {
-  display: none;
-} */
+@media (min-width: 0px) {
+  #introSection {
+    padding: 80px 10% 40px;
+    text-align: center;
+  }
+
+  #introInner {
+    height: auto;
+    flex-direction:column;
+  }
+
+  #introTitle {
+    font-size: 3.5rem;
+    margin-bottom: 32px;
+  }
+
+  #introInfo {
+    width: 100%;
+  }
+
+  #introParagraphs {
+    font-size: 1.3rem;
+  }
+
+  #introTestemonialsSmall {
+    height: 150px;
+    display: flex;
+  }
+
+  #introTestemonialsSmall > div {
+    width: 50%
+    /* width diff in media */
+  }
+
+  .flashingReviewsContainer {
+    /* display: grid; */
+    /* width: 50%; */
+    justify-items: center;
+    align-content: center;
+    height: 150px;
+    /* margin-top: 40px; */
+    /* object-fit: contain; */
+  }
+
+  .introReview {
+    max-height: 150px;
+  }
+
+  @media (max-width: 575px) {
+    #introSection {
+      padding: 40px 3%;
+      text-align: center;
+    }
+
+    #introTitle {
+      font-size: 3rem;
+      margin-bottom: 32px;
+    }
+
+    #introParagraphs {
+      font-size: 1.125rem;
+    }
+
+    #introTestemonialsSmall > div {
+      width: 100%
+      
+    }
+
+
+  }
+}
+
+@media (min-width: 992px) {
+
+  #introSection {
+    text-align: left;
+  }
+
+  #introInner {
+    height: 500px;
+    flex-direction:unset;
+  }
+
+  #introInfo {
+    width: 50%;
+  }
+
+  #introTestemonialsLarge {
+    width: 50%;
+    height: 500px;
+  }
+
+  #introTestemonialsSmall {
+    display: none;
+  }
+
+  .flashingReviewsContainer {
+    justify-items: normal;
+    align-content: normal;
+    height: 500px;
+  }
+
+  @media (min-width: 992px) {
+    #introSection {
+      padding: 50px 110px;
+      
+    }
+
+    #introTitle {
+      font-size: 3rem;
+    }
+
+    #introParagraphs {
+      font-size: 1.125rem;
+    }
+
+    #introParagraphs > p {
+      margin: 15px 0;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    #introSection {
+      padding: 80px 110px;
+    }
+
+    #introTitle {
+      font-size: 3.5rem;
+    }
+
+    #introParagraphs {
+      font-size: 1.3rem;
+    }
+
+    #introParagraphs > p {
+      margin: 20px 0;
+    }
+  }
+}
