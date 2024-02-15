@@ -34,7 +34,7 @@ function NavFile({expand}) {
             >
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                  Offcanvas
+                  Page Contents
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
