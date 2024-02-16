@@ -1,4 +1,4 @@
-import "./Introduction.css";
+import "./AboutIntro.css";
 import "../../App.css"
 
 import {
@@ -8,7 +8,7 @@ import {
 } from "../../../assets/home/home-images";
 import ImageFlash from "./ImageFlash/ImageFlash";
 
-export default function Introduction() {
+export default function AboutIntro() {
   return (
     <section id="introSection">
       <div id="introInner">

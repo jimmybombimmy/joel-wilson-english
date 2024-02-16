@@ -1,0 +1,13 @@
+#aboutMethodSection {
+  padding: 80px 110px;
+}
+
+#aboutMethodTitle {
+  font-weight: 800;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+#aboutMethodSection > p {
+  font-size: 1.125rem;
+}
