@@ -1,8 +1,10 @@
 #introSection {
   background-color: rgb(239, 248, 250);
-  border: 3px solid black;
+  border-top: 3px solid #0b4d78;
+  border-bottom: 3px solid #0b4d78;
   justify-content: center;
   display: flex;
+  color: #2F2E41
 
   /* padding in media */
 }
@@ -26,6 +28,7 @@
   font-weight: 700;
   position: relative;
   right: 3px;
+  
 
   /* font-size in media */
 }

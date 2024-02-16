@@ -18,7 +18,7 @@ export default function ImageFlash({ imgArray, imgOnBottom, imgMove, hideClass }
     reset: true,
     reverse: flip,
     delay: () => {
-      return flip ? 3000 : 3000;
+      return flip ? 2500 : 2500;
     },
     config: { duration: 500 },
     onRest: () => {
