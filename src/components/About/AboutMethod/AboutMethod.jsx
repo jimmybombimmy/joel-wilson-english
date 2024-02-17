@@ -72,21 +72,21 @@ export default function AboutMethod() {
           <div className="aboutArticleLeft">
             <h2 className="aboutMethodTitle">My aims for you is to:</h2>
             <ul>
-              <li>
+              <li className="aboutMethodParagraph">
                 Make English language learning enjoyable and realistic, to give
                 you a motivational, functional, and applicable understanding of
                 the English language.
               </li>
-              <li>
+              <li className="aboutMethodParagraph">
                 Give higher-level students the personalised advice which they
                 need to achieve proficiency.
               </li>
-              <li>
+              <li className="aboutMethodParagraph">
                 Give lower-level students lessons which develop their language
                 skills and don’t make them feel stressed about language
                 learning!
               </li>
-              <li>
+              <li className="aboutMethodParagraph">
                 Give my young students a positive experience of education in
                 order that they develop a positive attitude to their studies in
                 general
