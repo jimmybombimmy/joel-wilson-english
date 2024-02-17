@@ -1,4 +1,5 @@
 import "./AboutBottom.css";
+import "../../App.css"
 
 export default function AboutBottom() {
   return (
@@ -15,6 +16,7 @@ export default function AboutBottom() {
           </p>
           <p>A <span style={{color: "#C1688A"}}>30-minute trial</span> is available on request!</p>
         </div>
+        <hr className="aboutBottomHR" />
         <div>
           <p>
             I also upload guides and materials to my YouTube channel and my

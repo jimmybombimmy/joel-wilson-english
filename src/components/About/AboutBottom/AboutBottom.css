@@ -6,7 +6,7 @@
 }
 
 #aboutBottomInner {
-  margin: -40px 110px 80px;
+  margin: 0 110px 80px;
   padding: 40px 80px;
   grid-template-columns: 47.5% 47.5%;
   gap: 5%;
@@ -15,12 +15,13 @@
   background-color: #fef7e5;
   border-radius: 40px;
   border: 5px solid #ffdc81;
+
+  /* border-radius in media */
 }
 
 #aboutBottomTitle {
   font-weight: 800;
   font-size: 2.5rem;
-  margin-bottom: 20px;
   grid-column: 1/3;
 }
 
@@ -30,4 +31,49 @@
 
 #aboutBottomSection a {
   text-decoration: none;
+}
+
+.aboutBottomHR {
+  display: none;
+}
+
+
+@media (max-width: 992px) {
+  #aboutBottomInner {
+    margin: 80px;
+    padding: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  #aboutBottomInner {
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  
+}
+
+@media (max-width: 576px) {
+  #aboutBottomInner {
+    display: inline;
+    margin: 0 40px 110px;
+  }
+
+  #aboutBottomTitle {
+    margin-bottom: 20px;
+  }
+
+  .aboutBottomHR {
+    display:block;
+    color: #0b4d78;
+    height: 1px;
+  }
+}
+
+@media (max-width: 450px) {
+  #aboutBottomInner {
+    
+    margin: 0 20px 110px;
+  }
 }
