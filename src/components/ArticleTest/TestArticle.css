@@ -1,7 +1,9 @@
 #articlePage {
   width: 100vw;
   display: grid;
-  padding: 80px 110px;
+  padding: 20px;
+
+  /* padding in media */
 }
 
 #articleContainer {
@@ -10,19 +12,20 @@
   display: block;
   justify-self: center;
   /* flex-direction: column; */
-  flex-wrap:wrap;
+  flex-wrap: wrap;
 }
 
 #articleContainer > * {
   max-width: 100%;
-  overflow-wrap:break-word;
+  overflow-wrap: break-word;
 }
 
 #articleTitle {
-  font-size: 3.75rem;
   font-weight: 700;
   margin-bottom: 0;
   width: 100%;
+
+  /* font-size in media */
 }
 
 #articleCreated {
@@ -43,21 +46,26 @@
 .articleImg {
   max-height: 300px;
   width: auto;
-  margin: 50px;
+  margin: 40px 20px;
   max-width: 80%;
+
+  /* margin in media */
 }
 
 .articleText {
-  font-size: 1.3rem;
   width: 100%;
   display: block;
   /* width: max-content;  */
   /* height: min-content; */
+
+  font-size: 1.125rem;
 }
 
 .pullQuote {
   margin: 25px;
-  width: 30%;
+  width: auto
+
+  /* width in media */
 }
 
 .floatLeft {
@@ -86,4 +94,61 @@
 
 .articleQuote > p {
   margin-bottom: 0;
+}
+
+@media (min-width: 576px) {
+  #articlePage {
+    padding: 50px;
+  }
+
+  .articleImg {
+    margin: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  #articlePage {
+    padding: 80px 110px;
+  }
+
+  .articleImg {
+    margin: 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  
+  #articleContainer {
+    max-width: 1000px;
+  }
+
+  #articleTitle {
+    font-size: 3rem;
+  }
+
+  .articleText {
+    font-size: 1.125rem;
+  }
+
+  .pullQuote {
+    width: 30%;
+  }
+}
+
+@media (min-width: 1400px) {
+  #articlePage {
+    padding: 70px 110px;
+  }
+
+  #articleContainer {
+    max-width: 1250px;
+  }
+
+  #articleTitle {
+    font-size: 3.5rem;
+  }
+
+  .articleText {
+    font-size: 1.3rem;
+  }
 }
