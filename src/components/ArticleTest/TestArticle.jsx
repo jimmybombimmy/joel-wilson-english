@@ -112,7 +112,7 @@ export default function TestArticle() {
         floatie = 'floatRight'
       }
       pullQuoteCount++
-      return <aside className={`pullQuote ${floatie}`}><blockquote className="articleQuote"><p  style={{fontSize: textMap[0].length < 100 ? "1.5rem" : "1.3rem"}}>{textMap}</p></blockquote></aside>
+      return <aside className={`pullQuote ${floatie}`}><blockquote className="articleQuote"><p  style={{fontSize: textMap[0].length < 100 ? "1.3rem" : "1.125rem"}}>{textMap}</p></blockquote></aside>
     }
   }
 

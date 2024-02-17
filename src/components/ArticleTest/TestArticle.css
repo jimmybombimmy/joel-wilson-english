@@ -63,7 +63,8 @@
 
 .pullQuote {
   margin: 25px;
-  width: auto
+  width: auto;
+  
 
   /* width in media */
 }
@@ -90,6 +91,7 @@
   flex-direction: column;
   justify-content: center;
   margin-bottom: 0;
+  border-radius: 10px;
 }
 
 .articleQuote > p {
@@ -98,7 +100,7 @@
 
 @media (min-width: 576px) {
   #articlePage {
-    padding: 50px;
+    padding: 40px;
   }
 
   .articleImg {
@@ -108,7 +110,7 @@
 
 @media (min-width: 768px) {
   #articlePage {
-    padding: 80px 110px;
+    padding: 80px 80px;
   }
 
   .articleImg {
@@ -117,6 +119,9 @@
 }
 
 @media (min-width: 992px) {
+  #articlePage {
+    padding: 80px 110px;
+  }
   
   #articleContainer {
     max-width: 1000px;
