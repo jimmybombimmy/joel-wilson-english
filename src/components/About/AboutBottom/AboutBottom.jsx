@@ -13,7 +13,7 @@ export default function AboutBottom() {
           <p>
             All of my services can be found on my website: <a href="www.joelwilson.as.me">www.joelwilson.as.me</a>
           </p>
-          <p>A <u style={{color: "#C1688A"}}>30-minute trial</u> is available on request!</p>
+          <p>A <span style={{color: "#C1688A"}}>30-minute trial</span> is available on request!</p>
         </div>
         <div>
           <p>
