@@ -9,7 +9,13 @@ export default function AboutMethod() {
   return (
     <section id="aboutMethodSection">
       <div class="aboutMethodInner">
+        <h1 id="myMethodTitle">My Method</h1>
         <article id="aboutArticlePt1">
+          <img
+            className="aboutArticleRight aboutMethodImg"
+            src={undrawGroup}
+            alt="Illustration of receiving feedback as a group"
+          />
           <div className="aboutArticleLeft">
             <h2 className="aboutMethodTitle">
               I believe that feedback is key to proper language learning.
@@ -26,11 +32,6 @@ export default function AboutMethod() {
               page).
             </p>
           </div>
-          <img
-            className="aboutArticleRight aboutMethodImg"
-            src={undrawGroup}
-            alt="Illustration of receiving feedback as a group"
-          />
         </article>
 
         <article id="aboutArticlePt2">
@@ -63,6 +64,11 @@ export default function AboutMethod() {
         </article>
 
         <article id="aboutArticlePt3">
+          <img
+            src={undrawHappyNews}
+            className="aboutArticleRight aboutMethodImg"
+            alt="Illustration of successful news"
+          />
           <div className="aboutArticleLeft">
             <h2 className="aboutMethodTitle">My aims for you is to:</h2>
             <ul>
@@ -87,11 +93,6 @@ export default function AboutMethod() {
               </li>
             </ul>
           </div>
-          <img
-            src={undrawHappyNews}
-            className="aboutArticleRight aboutMethodImg"
-            alt="Illustration of successful news"
-          />
         </article>
       </div>
     </section>

@@ -2,13 +2,22 @@
   display: grid;
   justify-content: center;
   color: #343a3f;
+  text-align: left;
 }
 
 .aboutMethodInner {
   margin: 80px 110px;
   max-width: 1250px;
   display: grid;
-  
+
+  /* margin in media */
+}
+
+#myMethodTitle {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
 }
 
 .aboutMethodInner > article {
@@ -37,6 +46,16 @@
   grid-template-columns: 55% 40%;  
 }
 
+.aboutArticleLeft {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.aboutArticleRight {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
 .aboutMethodImg {
   width: 100%;
   max-height: 300px;
@@ -63,5 +82,42 @@
 
 .aboutMethodInner > img {
   width: 100%;
+}
+
+@media (max-width: 991px) {
+  #myMethodTitle {
+    font-size: 3rem;
+  }
+
+  .aboutMethodInner {
+    margin: 80px;
+  }
+
+  .aboutMethodInner > article {
+    display: inline;
+    gap: 5%;
+    align-items: center;
+    margin-bottom: 120px;
+  }
+
+  .aboutMethodInner > img {
+    width: 80%;
+  }
+}
+
+@media (max-width: 576px) { 
+  #aboutMethodSection {
+    text-align: center;
+  }
+
+  .aboutMethodInner {
+    margin: 40px;
+  }
+}
+
+@media (max-width: 450px) {
+  .aboutMethodInner {
+    margin: 60px 20px;
+  }
 }
 
