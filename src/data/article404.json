@@ -1,0 +1,46 @@
+{
+  "data": [
+      {
+          "id": 3,
+          "attributes": {
+              "title": "ERR404: Article Not Found",
+              "body1": [
+                  {
+                      "type": "paragraph",
+                      "children": [
+                          {
+                              "text": "We're sorry. This article does not exist.",
+                              "type": "text"
+                          }
+                      ]
+                  }
+              ],
+              "body2": null,
+              "body3": null,
+              "createdAt": "2024-02-18T16:05:07.854Z",
+              "updatedAt": "2024-02-18T16:05:21.358Z",
+              "publishedAt": "2024-02-18T16:05:21.352Z",
+              "img1": "this will be changed",
+              "img2": null,
+              "img3": null,
+              "img4": null,
+              "body4": null,
+              "img5": null,
+              "body5": null,
+              "alt1": "404 error image",
+              "alt2": null,
+              "alt3": null,
+              "alt4": null,
+              "alt5": null
+          }
+      }
+  ],
+  "meta": {
+      "pagination": {
+          "page": 1,
+          "pageSize": 25,
+          "pageCount": 1,
+          "total": 1
+      }
+  }
+}

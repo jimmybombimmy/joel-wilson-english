@@ -11,3 +11,11 @@ export const getTestArticleById = (id) => {
 export const getTestArticles = () => {
   return strapi.get(`/article-tests`)
 }
+
+export const getArticlesById = (id) => {
+  return strapi.get(`/articles/${id}`)
+} 
+
+export const getArticles = () => {
+  return strapi.get(`/articles`)
+}

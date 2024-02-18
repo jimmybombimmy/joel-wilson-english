@@ -7,7 +7,6 @@ export default function ArticleTest() {
   useEffect(() => {
     if (!testAllArticlesData) {
       getTestArticles().then(({ data }) => {
-        console.log("dater", data.data)
         return setAllTestArticleData(data.data);
       });
     }
