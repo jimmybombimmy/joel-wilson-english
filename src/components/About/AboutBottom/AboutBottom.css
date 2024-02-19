@@ -29,8 +29,14 @@
   font-size: 1.125rem;
 }
 
-#aboutBottomSection a {
+.aboutBottomAnchors {
   text-decoration: none;
+  color: #0b4d78;
+}
+
+.aboutBottomAnchors:hover {
+  /* color: #03273e; */
+  font-weight: 600;
 }
 
 .aboutBottomHR {

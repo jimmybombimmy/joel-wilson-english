@@ -12,9 +12,9 @@ export default function AboutBottom() {
             classes of up to 7 people.
           </p>
           <p>
-            All of my services can be found on my website: <a href="www.joelwilson.as.me">www.joelwilson.as.me</a>
+            All of my services can be found on my website: <a className="aboutBottomAnchors" href="http://www.joelwilson.as.me">www.joelwilson.as.me</a>
           </p>
-          <p>A <span style={{color: "#C1688A"}}>30-minute trial</span> is available on request!</p>
+          <p>A <span style={{color: "red"}}>30-minute trial</span> is available on request!</p>
         </div>
         <hr className="aboutBottomHR" />
         <div>
@@ -24,19 +24,19 @@ export default function AboutBottom() {
           </p>
           <p>
             <strong>YouTube:</strong>{" "}
-            <a href="https://www.youtube.com/@JoelEdwardIanWilson/videos">
+            <a className="aboutBottomAnchors" href="https://www.youtube.com/@JoelEdwardIanWilson/videos" target="blank">
               @JoelEdwardIanWilson
             </a>
           </p>
           <p>
             <strong>Instagram:</strong>{" "}
-            <a href="https://www.instagram.com/joel.edward.ian.wilson/">
+            <a className="aboutBottomAnchors" href="https://www.instagram.com/joel.edward.ian.wilson/" target="blank">
               joel.edward.ian.wilson
             </a>
           </p>
           <p>
             <strong>TikTok:</strong>{" "}
-            <a href="https://www.tiktok.com/@joel.edward.ian.wilson">
+            <a className="aboutBottomAnchors" href="https://www.tiktok.com/@joel.edward.ian.wilson" target="blank">
               joel.edward.ian.wilson
             </a>
           </p>
