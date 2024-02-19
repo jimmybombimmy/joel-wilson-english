@@ -35,6 +35,7 @@
   padding: 3px 15px 6px;
   border: none;
   font-weight: 700;
+  display: inline;
 
   /* font-size in media */
 }
@@ -281,11 +282,20 @@
   }
 
   .heroButtons {
-    display: flex;
+    display: grid;
     justify-content: center;
-    margin: 5%;
+    margin: 5% auto;
+    position: relative;
 
     /* font size in media */
+  }
+
+  .heroButton1 {
+    right: 5%
+  }
+
+  .heroButton2 {
+    left: 5%
   }
 
   @media (min-width: 768px) and (max-width: 991px) {
@@ -313,14 +323,23 @@
     }
 
     #heroButtonsContainer {
-      width: 100%;
+      width: 100vw;
       justify-content: center;
       display: flex;
+      margin: auto;
     }
 
     .heroButtons {
       font-size: 1.3rem;
     }
+    
+    /* .heroButton1 {
+      right: 10%
+    }
+  
+    .heroButton2 {
+      left: 5%
+    } */
   }
 
   @media (max-width: 767px) {
@@ -373,6 +392,8 @@
       width: 100%;
       justify-content: center;
       display: flex;
+      margin-top: 20px;
+      margin-bottom: 40px;
     }
 
     .heroButtons {
@@ -386,12 +407,27 @@
       margin: 30px 35%;
     }
 
+    #heroButtonsContainer {
+      display: flex;
+      flex-direction: column;
+    }
+
     .heroButtons {
       font-size: 1.3rem;
       padding: 6px 16px 8px;
-      margin: 20px 3%;
+      margin: 12px 3%;
       border-radius: 5px;
       width: 94%;
     }
+
+    .heroButton1 {
+      right: 0
+    }
+  
+    .heroButton2 {
+      left: 0
+    }
+
   }
+
 }
