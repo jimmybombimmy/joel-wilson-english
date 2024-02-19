@@ -11,14 +11,23 @@ export default function CallToAction() {
             Book a lesson today to get you real good at being proud to be
             British son.
           </h2>
-          <button id="callToActionBookButton" className="callToActionButtons">
-            Book a lesson
-          </button>
-          <button id="callToActionInfoButton" className="callToActionButtons">
-            Find out more
-          </button>
+          <a href="https://joelwilson.as.me/schedule.php">
+            <button id="callToActionBookButton" className="callToActionButtons">
+              Book a lesson
+            </button>
+          </a>
+          <a href="/about">
+            <button id="callToActionInfoButton" className="callToActionButtons">
+              Find out more
+            </button>
+          </a>
         </div>
-        <img id="callToActionImg" className="hideBelow991" src={michaelFranks} alt="" />
+        <img
+          id="callToActionImg"
+          className="hideBelow991"
+          src={michaelFranks}
+          alt=""
+        />
       </section>
       <section id="footerIntoCTA"></section>
     </>

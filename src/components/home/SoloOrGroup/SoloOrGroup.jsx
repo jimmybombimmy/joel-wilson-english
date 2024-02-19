@@ -33,12 +33,16 @@ export default function SoloOrGroupSection() {
               nisi ut aliquip ex ea commodo consequat.{" "}
             </p>
             <div className="lessonButtonsGroup">
-              <button className="lessonButtons heroButton2">
-                Book a lesson
-              </button>
-              <button className="lessonButtons heroButton1">
-                Find out more
-              </button>
+              <a href="https://joelwilson.as.me/schedule.php">
+                <button className="lessonButtons heroButton2">
+                  Book a lesson
+                </button>
+              </a>
+              <a href="/one-to-one-classes">
+                <button className="lessonButtons heroButton1">
+                  Find out more
+                </button>
+              </a>
             </div>
           </div>
         </article>
@@ -56,12 +60,16 @@ export default function SoloOrGroupSection() {
               nisi ut aliquip ex ea commodo consequat.{" "}
             </p>
             <div className="lessonButtonsGroup">
-              <button className="lessonButtons heroButton2 groupButtons">
-                Book a lesson
-              </button>
-              <button className="lessonButtons heroButton1 groupButtons">
-                Find out more
-              </button>
+              <a href="https://joelwilson.as.me/schedule.php">
+                <button className="lessonButtons heroButton2 groupButtons">
+                  Book a lesson
+                </button>
+              </a>
+              <a href="/group-classes">
+                <button className="lessonButtons heroButton1 groupButtons">
+                  Find out more
+                </button>
+              </a>
             </div>
           </div>
         </article>

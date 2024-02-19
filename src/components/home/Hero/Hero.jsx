@@ -12,9 +12,19 @@ export default function HeroSection(homeImg) {
     <section id="heroSection" data-interval="false">
       <div id="heroInner">
         <section id="heroLeft">
-          <img id="triangleArrows" className="hideBelow991" src={triangleArrows} alt="" />
+          <img
+            id="triangleArrows"
+            className="hideBelow991"
+            src={triangleArrows}
+            alt=""
+          />
           <article id="heroInfo">
-            <img id="joelLinkedIn" className="hideAbove992" src={joelLinkedIn} alt="" />
+            <img
+              id="joelLinkedIn"
+              className="hideAbove992"
+              src={joelLinkedIn}
+              alt=""
+            />
             <h1 id="heroTitle">Let's learn English together!</h1>
             <div id="learnUnderlineContainer">
               <img id="learnUnderline" src={learnUnderline} alt="" />
@@ -31,10 +41,23 @@ export default function HeroSection(homeImg) {
               I have been teaching for the past 9 years and know more about
               England than King Charles himself!
             </p>
-            <img id="wavyArrows" className="hideBelow991" src={wavyArrows} alt="" />
+            <img
+              id="wavyArrows"
+              className="hideBelow991"
+              src={wavyArrows}
+              alt=""
+            />
             <div id="heroButtonsContainer">
-            <button className="heroButtons heroButton1">Book a Lesson</button>
-            <button className="heroButtons heroButton2">Find out more</button>
+              <a href="https://joelwilson.as.me/schedule.php">
+                <button className="heroButtons heroButton1">
+                  Book a Lesson
+                </button>
+              </a>
+              <a href="/about">
+                <button className="heroButtons heroButton2">
+                  Find out more
+                </button>
+              </a>
             </div>
           </article>
         </section>

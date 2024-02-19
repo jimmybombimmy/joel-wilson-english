@@ -9,6 +9,11 @@ body {
   font-family: "Sarabun", 'Gill Sans Nova', 'Ubuntu', 'Calibri', 'DejaVu Sans', 'source-sans-pro', sans-serif;
 }
 
+a {
+  color:unset;
+  text-decoration: none;
+}
+
 @media (min-width: 992px) {
   .hideAbove992 {
     display: none;

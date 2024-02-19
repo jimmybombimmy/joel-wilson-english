@@ -1,5 +1,4 @@
 import "./ArticlesPreview.css";
-import { ARTICLES } from "../../../data/articles";
 import { useEffect, useState } from "react";
 import { getArticles } from "../../../utils/api-calls";
 import { extractArticleBodyPreview } from "../../../utils/article-utils";
@@ -29,22 +28,23 @@ export default function ArticlesPreview() {
     <section id="articlesPreviewSection">
       <section id="articlesPreviewTop">
         <h2 id="articleSectionTitle">{!threeArticles ? 'Loading' : ''} Learning Materials</h2>
-        <button id="viewArticlesButton">View All</button>
+        <a href="/articles"><button id="viewArticlesButton">View All</button></a>
       </section>
       <section id="threeArticles">
         {threeArticles ? (
-          threeArticles.map(({attributes}) => {
+          threeArticles.map((article) => {
+            
             return (
               <div
                 className="article"
-                key={attributes.title.replace(/\W+/g, "").toLowerCase()}
+                key={article.attributes.title.replace(/\W+/g, "").toLowerCase()}
               >
-                <img className="articlePrevImg" src={attributes.img1} alt={attributes.alt1} />
+                <img className="articlePrevImg" src={article.attributes.img1} alt={article.attributes.alt1} />
                 <article className="articlePrevText">
-                  <h3 className="articlePrevTitle">{attributes.title}</h3>
-                  <p className="articlePrevBody">{extractArticleBodyPreview(attributes.body1)}</p>
-                  <a className="articlePrevReadMore" href="">
-                    {attributes.title === "ERR404: Article Not Found" ? "" : "Read more"}
+                  <h3 className="articlePrevTitle">{article.attributes.title}</h3>
+                  <p className="articlePrevBody">{extractArticleBodyPreview(article.attributes.body1)}</p>
+                  <a className="articlePrevReadMore" href={`/articles/${article.id}`}>
+                    {article.attributes.title === "ERR404: Article Not Found" ? "" : "Read more"}
                   </a>
                 </article>
               </div>
