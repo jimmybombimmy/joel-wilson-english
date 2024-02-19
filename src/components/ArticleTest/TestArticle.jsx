@@ -1,9 +1,10 @@
 import { useParams } from "react-router-dom";
-import { getTestArticleById } from "../../utils/api-calls";
+import { getArticlesById, getTestArticleById } from "../../utils/api-calls";
 import { convertTimestampToDate } from "../../utils/utils";
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
-import "./TestArticle.css"
+import "./TestArticle.css";
 
 export default function TestArticle() {
   const [articleData, setArticleData] = useState(false);
@@ -19,16 +20,23 @@ export default function TestArticle() {
     "img5",
     "body5",
   ];
+  const urlPath = useLocation().pathname;
 
-  let pullQuoteCount = 0
+  let pullQuoteCount = 0;
 
   const { id } = useParams();
 
   useEffect(() => {
-    if (!articleData) {
-      getTestArticleById(id).then(({ data }) => {
-        return setArticleData(data.data.attributes);
-      });
+    if (!articleData && urlPath) {
+      if (urlPath.slice(1, 7) === "secret") {
+        getTestArticleById(id).then(({ data }) => {
+          return setArticleData(data.data.attributes);
+        });
+      } else if (urlPath.slice(1, 8) === "article") {
+        getArticlesById(id).then(({ data }) => {
+          return setArticleData(data.data.attributes);
+        });
+      }
     }
   }, []);
 
@@ -52,7 +60,7 @@ export default function TestArticle() {
     return textReturn;
   }
 
-  function articleSegment(section, sectionName) {
+  function articleSegment(section) {
     let textMap = section.children.map((text) => {
       return textRetrieval(
         text.text,
@@ -107,48 +115,68 @@ export default function TestArticle() {
     } else if (section.type === "quote") {
       let floatie;
       if (pullQuoteCount % 2 === 0) {
-        floatie = 'floatLeft'
+        floatie = "floatLeft";
       } else {
-        floatie = 'floatRight'
+        floatie = "floatRight";
       }
-      pullQuoteCount++
-      return <aside className={`pullQuote ${floatie}`}><blockquote className="articleQuote"><p  style={{fontSize: textMap[0].length < 100 ? "1.3rem" : "1.125rem"}}>{textMap}</p></blockquote></aside>
+      pullQuoteCount++;
+      return (
+        <aside className={`pullQuote ${floatie}`}>
+          <blockquote className="articleQuote">
+            <p
+              style={{
+                fontSize: textMap[0].length < 100 ? "1.3rem" : "1.125rem",
+              }}
+            >
+              {textMap}
+            </p>
+          </blockquote>
+        </aside>
+      );
     }
   }
 
   return (
     <main id="articlePage">
       <div id="articleContainer">
-      <h1 id="articleTitle">{articleData.title ? articleData.title : "Article Loading..."}</h1>
-      <p id="articleCreated">
-        {articleData
-          ? `Created on: ${convertTimestampToDate(
-              articleData.updatedAt
-            )}`
-          : ""}
-      </p>
-      {articleData ? (
-        bodyMap.map((body) => {        
-          if (body.slice(0,3) === "img") {
-            if (articleData[body]) {
-              return <div className="imgContainer"><img className="articleImg" src={articleData[body]} alt={articleData[`alt${body.slice(3)}`]} /></div>
+        <h1 id="articleTitle">
+          {articleData.title ? articleData.title : "Article Loading..."}
+        </h1>
+        <p id="articleCreated">
+          {articleData
+            ? `Created on: ${convertTimestampToDate(articleData.updatedAt)}`
+            : ""}
+        </p>
+        {articleData ? (
+          bodyMap.map((body) => {
+            if (body.slice(0, 3) === "img") {
+              if (articleData[body]) {
+                return (
+                  <div className="imgContainer">
+                    <img
+                      className="articleImg"
+                      src={articleData[body]}
+                      alt={articleData[`alt${body.slice(3)}`]}
+                    />
+                  </div>
+                );
+              }
+            } else {
+              return articleData[body] ? (
+                articleData[body].map((paragraph) => {
+                  if (typeof paragraph === "string") {
+                    return;
+                  }
+                  return articleSegment(paragraph, body);
+                })
+              ) : (
+                <></>
+              );
             }
-          } else {
-            return articleData[body] ? (
-              articleData[body].map((paragraph) => {
-                if (typeof paragraph === "string") {
-                  return;
-                }
-                return articleSegment(paragraph, body);
-              })
-            ) : (
-              <></>
-            );
-          }
-        })
-      ) : (
-        <p>Waiting for section</p>
-      )}
+          })
+        ) : (
+          <p>Waiting for section</p>
+        )}
       </div>
     </main>
   );

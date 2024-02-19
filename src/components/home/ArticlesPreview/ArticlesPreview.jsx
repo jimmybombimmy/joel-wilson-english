@@ -1,7 +1,7 @@
 import "./ArticlesPreview.css";
 import { useEffect, useState } from "react";
 import { getArticles } from "../../../utils/api-calls";
-import { extractArticleBodyPreview } from "../../../utils/article-utils";
+import { extractArticleBodyPreview } from "../../../utils/article-utils.js";
 import articleNotFound from "../../../data/article404.json";
 import articleNotFoundImg from "../../../assets/articles/404-preview.png"
 

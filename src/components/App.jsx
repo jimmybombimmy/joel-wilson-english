@@ -18,6 +18,7 @@ function App() {
       <Route path="/about" element={<About />}></Route>
 
       <Route path="/articles" element={<PageInProgress />}></Route>
+      <Route path="/articles/:id" element={<TestArticle />}></Route> 
       <Route path="/one-to-one-classes" element={<PageInProgress />}></Route>
       <Route path="/group-classes" element={<PageInProgress />}></Route>
 
