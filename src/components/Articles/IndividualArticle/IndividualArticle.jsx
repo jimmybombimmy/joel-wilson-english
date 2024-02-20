@@ -1,12 +1,12 @@
 import { useParams } from "react-router-dom";
-import { getArticlesById, getTestArticleById } from "../../utils/api-calls";
-import { convertTimestampToDate } from "../../utils/utils";
+import { getArticlesById, getTestArticleById } from "../../../utils/api-calls";
+import { convertTimestampToDate } from "../../../utils/utils";
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-import "./TestArticle.css";
+import "./IndividualArticle.css";
 
-export default function TestArticle() {
+export default function IndividualArticle() {
   const [articleData, setArticleData] = useState(false);
   const bodyMap = [
     "img1",

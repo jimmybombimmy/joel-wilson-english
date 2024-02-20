@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react"
 import { getArticles } from "../../utils/api-calls";
 
-export default function ArticleTest() {
+export default function ArticlesPage() {
   const [allArticlesData, setAllArticleData] = useState(false);
 
   useEffect(() => {
-    if (!testAllArticlesData) {
+    if (!allArticlesData) {
       getArticles().then(({ data }) => {
         return setAllArticleData(data.data);
       });

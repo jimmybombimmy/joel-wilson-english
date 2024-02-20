@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react"
 import { getTestArticles } from "../../utils/api-calls";
 
-export default function ArticleTest() {
+import "./ArticlesTestPage.css"
+
+export default function ArticlesTestPage() {
   const [testAllArticlesData, setAllTestArticleData] = useState(false);
 
   useEffect(() => {
@@ -16,7 +18,7 @@ export default function ArticleTest() {
     <main>
       <h1>Test articles</h1>
     {testAllArticlesData ? (testAllArticlesData.map((stuff) => {
-      return <h5><a href={`/secret-article-test-page/${stuff.id}`}> {stuff.attributes.title}</a> - {stuff.id}</h5>
+      return <h5 className="testArticleLinks"><a href={`/secret-article-test-page/${stuff.id}`}> {stuff.attributes.title}</a> - {stuff.id}</h5>
     })) : (<p>Waiting for articles</p>)}
     </main>
   )
