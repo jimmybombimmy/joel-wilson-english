@@ -1,0 +1,64 @@
+#articlesPage {
+  --articleBoxWidth: 370px;
+  text-align: center;
+  margin: 80px auto;
+  max-width: 1250px;
+}
+
+#articleCountInfo {
+  text-align: right;
+  color: grey;
+  font-size: 1.125rem;
+}
+
+#articlesPageTitle {
+  margin-bottom: 0;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+#articleBoxesSection {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 70px;
+  margin: 80px 0;
+}
+
+.articleBox {
+  width: var(--articleBoxWidth);
+}
+
+.articleBoxImg {
+  width: var(--articleBoxWidth);
+  object-fit:cover;
+  height: 200px;
+}
+
+.articleBoxInfo {
+  text-align: left;
+  padding: 12px 0 20px;
+}
+
+.articleBoxCreatedAt {
+  color: grey;
+}
+
+.articleBoxTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  
+}
+
+.articleBoxText {
+  font-size: 1.125rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  /* font-size, line-height and margin-bottom in media */
+}
