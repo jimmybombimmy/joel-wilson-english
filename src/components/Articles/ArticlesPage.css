@@ -28,8 +28,8 @@
   grid-template-columns: 1fr 1fr 1fr;
   gap: 70px;
   margin: 80px 0;
-  
-  /* gap in media */
+
+  /* gap, grid-template-columns in media */
 }
 
 .articleBox {
@@ -37,13 +37,15 @@
   background-color: rgb(240, 240, 240);
   border-radius: 10px;
   box-shadow: 0 10px 10px rgb(68, 68, 68, 0.25);
+
+  /* max-width in media */
 }
 
 .articleBoxImg {
   width: var(--articleBoxWidth);
-  object-fit:cover;
+  object-fit: cover;
   height: 200px;
-  border-radius: 10px 10px 0 0 ;
+  border-radius: 10px 10px 0 0;
 
   /* height in media */
 }
@@ -75,7 +77,6 @@
   text-overflow: ellipsis;
 
   /* font-size, font-weight and margin-bottom in media */
-  
 }
 
 .articleBoxText {
@@ -86,15 +87,14 @@
   overflow: hidden;
   text-overflow: ellipsis;
   margin-bottom: 16px;
-  
+
   /* font-size, line-height and margin-bottom in media */
 }
 
-@media(max-width: 1400px) {
-
+@media (max-width: 1400px) {
   #articlesPage {
-    max-width: 1000px;
-    --articleBoxWidth: 305px;
+    max-width: 900px;
+    --articleBoxWidth: 270px;
   }
 
   #articlesPageTitle {
@@ -127,5 +127,72 @@
   .articleBoxText {
     font-size: 1rem;
     margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 992px) {
+  #articlesPage {
+    margin: 80px 40px;
+  }
+
+  #articleBoxesSection {
+    margin-top: 30px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .articleBox {
+    width: 100%;
+    max-width: 370px;
+  }
+
+  .articleBoxImg {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  #articlesPage {
+    margin: 80px 40px;
+  }
+
+  #articleBoxesSection {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .articleBox {
+    height: 200px;
+    display: flex;
+    max-width: unset;
+    border-radius: 15px;
+  }
+
+  .articleBoxImg {
+    border-radius: 15px 0 0 15px;
+    height: 200px;
+    width: 40%;
+  }
+
+  .articleBoxInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .articleBoxText {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .articleBoxImg {
+    display: none;
+  }
+
+  .articleBoxInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px 20px;
   }
 }
