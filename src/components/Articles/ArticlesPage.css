@@ -185,6 +185,10 @@
 }
 
 @media (max-width: 576px) {
+  #articlesPage {
+    margin: 80px 20px;
+  }
+
   .articleBoxImg {
     display: none;
   }
