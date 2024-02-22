@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getArticles } from "../../utils/api-calls";
 import { extractArticleBodyPreview } from "../../utils/article-utils";
+import { convertTimestampToDate } from "../../utils/utils";
 
 import "./ArticlesPage.css";
 
@@ -33,8 +34,8 @@ export default function ArticlesPage() {
       <section id="articleBoxesSection">
         {allArticlesData ? (
           allArticlesData.map((articleInfo) => {
-            console.log(articleInfo);
             return (
+              <a href={`/articles/${articleInfo.id}`}>
               <article className="articleBox" key={`article${articleInfo.id}`}>
                 <img
                   className="articleBoxImg"
@@ -42,22 +43,20 @@ export default function ArticlesPage() {
                   alt={articleInfo.attributes.alt1}
                 />
                 <div className="articleBoxInfo">
-                  <p className="articleBoxCreatedAt">{`Article Created: ${articleInfo.attributes.updatedAt}`}</p>
+                  <p className="articleBoxCreatedAt">{`Article Created: ${convertTimestampToDate(articleInfo.attributes.updatedAt)}`}</p>
                   <h3 className="articleBoxTitle">
-                    <a href={`/articles/${articleInfo.id}`}>
-                      {" "}
                       {articleInfo.attributes.title}
-                    </a>{" "}
                   </h3>
                   <p className="articleBoxText">
                     {extractArticleBodyPreview(articleInfo.attributes.body1)}
                   </p>
                 </div>
               </article>
+              </a>
             );
           })
         ) : (
-          <p>Waiting for articles</p>
+          <></>
         )}
       </section>
     </main>

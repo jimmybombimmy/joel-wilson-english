@@ -28,17 +28,21 @@
 
 .articleBox {
   width: var(--articleBoxWidth);
+  background-color: rgb(240, 240, 240);
+  border-radius: 10px;
+  box-shadow: 0 10px 10px rgb(68, 68, 68, 0.25);
 }
 
 .articleBoxImg {
   width: var(--articleBoxWidth);
   object-fit:cover;
   height: 200px;
+  border-radius: 10px 10px 0 0 ;
 }
 
 .articleBoxInfo {
   text-align: left;
-  padding: 12px 0 20px;
+  padding: 12px 20px 20px;
 }
 
 .articleBoxCreatedAt {
@@ -59,6 +63,7 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  
 
   /* font-size, line-height and margin-bottom in media */
 }
