@@ -14,7 +14,6 @@ export default function ArticlesPreview() {
     if (!threeArticles) {
       getArticles().then(({ data }) => {
         const noOfArticles = data.data.length;
-        console.log("found article",data.data[noOfArticles - 1])
         return setThreeArticles([
           data.data[noOfArticles - 1] ? data.data[noOfArticles - 1] : articleNotFound.data[0],
           data.data[noOfArticles - 2] ? data.data[noOfArticles - 2] : articleNotFound.data[0],
@@ -32,12 +31,12 @@ export default function ArticlesPreview() {
       </section>
       <section id="threeArticles">
         {threeArticles ? (
-          threeArticles.map((article) => {
+          threeArticles.map((article, index) => {
             
             return (
               <div
                 className="article"
-                key={article.attributes.title.replace(/\W+/g, "").toLowerCase()}
+                key={`articlePreview${index}`}
               >
                 <img className="articlePrevImg" src={article.attributes.img1} alt={article.attributes.alt1} />
                 <article className="articlePrevText">

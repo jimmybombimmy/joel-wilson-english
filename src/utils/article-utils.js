@@ -7,7 +7,6 @@ export function extractChildrenPreview(child) {
 }
 
 export function extractArticleBodyPreview(body) {
-  console.log("extracted body", body);
   if (body.length === 0) {
     return "Unable to preview article text";
   }

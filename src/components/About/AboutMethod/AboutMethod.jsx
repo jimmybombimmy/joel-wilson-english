@@ -8,7 +8,7 @@ import "./AboutMethod.css";
 export default function AboutMethod() {
   return (
     <section id="aboutMethodSection">
-      <div class="aboutMethodInner">
+      <div className="aboutMethodInner">
         <h1 id="myMethodTitle">My Method</h1>
         <article id="aboutArticlePt1">
           <img

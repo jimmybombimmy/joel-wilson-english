@@ -33,9 +33,9 @@ export default function ArticlesPage() {
 
       <section id="articleBoxesSection">
         {allArticlesData ? (
-          allArticlesData.map((articleInfo) => {
+          allArticlesData.map((articleInfo, index) => {
             return (
-              <a href={`/articles/${articleInfo.id}`}>
+              <a href={`/articles/${articleInfo.id}`} key={`article${index}`}>
               <article className="articleBox" key={`article${articleInfo.id}`}>
                 <img
                   className="articleBoxImg"

@@ -2,7 +2,6 @@ import "./Footer.css";
 import socialMediaImages from "../../assets/social-media/social-media-images";
 
 export default function Footer() {
-  console.log(socialMediaImages);
 
   return (
     <footer id="footerSection">
@@ -39,7 +38,7 @@ export default function Footer() {
           <h3>Stay Connected</h3>
           {socialMediaImages.map((social) => {
             return (
-              <li className="social">
+              <li className="social" key={social.name}>
                 <img className="socialLink" src={social.link} alt="" />
                 <span className="socialName">{social.name}</span>
               </li>

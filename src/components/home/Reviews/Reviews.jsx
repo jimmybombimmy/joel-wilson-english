@@ -50,18 +50,19 @@ export default function ReviewsSection() {
       <h2 id="reviewsTitle">What students have to say</h2>
       <div className="fourReviewsSection hideBelow767">
         <Carousel data-bs-theme="dark" indicators={false} interval={null}>
-          {baseArrayInFour.map((selection) => {
+          {baseArrayInFour.map((selection, index) => {
             let i = 0;
             return (
-              <Carousel.Item>
-                <div className="gridContainer">
+              <Carousel.Item key={`reviewInd${index}Num${i+1}grid4`}> 
+                <div className="gridContainer" >
                   {selection.map((imgPath) => {
                     i++;
                     return (
-                      <div className="reviewImg">
+                      <div className="reviewImg" key={`imgOf4${imgPath}`}>
                         <img
                           className={`reviewImg${i}Of4 reviewImgFront`}
                           src={imgPath}
+                          key={imgPath}
                         />
                       </div>
                     );
@@ -83,22 +84,18 @@ export default function ReviewsSection() {
             <img className="reviewsDots" src={reviewsDots} />
           </div>
         </div>
-        {/* {homeImg.reviewsArray.map((review) => {
-            console.log(review);
-            return <img src={review} />;
-          })} */}
       </div>
       <div className="twoReviewsSection hideAbove768">
         <Carousel data-bs-theme="dark" indicators={false} interval={null}>
-          {baseArrayInTwo.map((selection) => {
+          {baseArrayInTwo.map((selection, index) => {
             let i = 0;
             return (
-              <Carousel.Item>
+              <Carousel.Item key={`reviewInd${index}Num${i+1}grid2`}>
                 <div className="gridContainer">
                   {selection.map((imgPath) => {
                     i++;
                     return (
-                      <div className="reviewImg">
+                      <div className="reviewImg" key={`imgOf2${imgPath}`}>
                         <img
                           className={`reviewImg${i}Of4 reviewImgFront`}
                           src={imgPath}
@@ -120,10 +117,6 @@ export default function ReviewsSection() {
             <img className="reviewsDots" src={reviewsDots} />
           </div>
         </div>
-        {/* {homeImg.reviewsArray.map((review) => {
-            console.log(review);
-            return <img src={review} />;
-          })} */}
       </div>
     </section>
   );
