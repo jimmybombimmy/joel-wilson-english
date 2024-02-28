@@ -313,8 +313,8 @@
     }
 
     #learnUnderline {
-      right: 30px;
-      bottom: 58px;
+      right: 144px;
+      bottom: 10px;
       width: 115px;
     }
 
@@ -342,6 +342,13 @@
     } */
   }
 
+  @media (max-width: 910px) {
+    #learnUnderline {
+      right: 30px;
+      bottom: 58px;
+      width: 115px;
+    }
+  }
   @media (max-width: 767px) {
     #joelLinkedIn {
       width: 20%;

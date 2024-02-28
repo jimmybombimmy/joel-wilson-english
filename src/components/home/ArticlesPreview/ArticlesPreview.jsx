@@ -1,4 +1,5 @@
 import "./ArticlesPreview.css";
+import "../../App.css"
 import { useEffect, useState } from "react";
 import { getArticles } from "../../../utils/api-calls";
 import { extractArticleBodyPreview } from "../../../utils/article-utils.js";
@@ -42,6 +43,7 @@ export default function ArticlesPreview() {
       <section id="threeArticles">
         {threeArticles ? (
           threeArticles.map((article, index) => {
+            console.log(index, article.attributes.title)
             return (
               <div className="article" key={`articlePreview${index}`}>
                 <a
@@ -57,10 +59,11 @@ export default function ArticlesPreview() {
                   }
                 >
                   <img
-                    className="articlePrevImg"
+                    className="articlePrevImg hideBelow991"
                     src={article.attributes.img1}
                     alt={article.attributes.alt1}
                   />
+                  
                   <article className="articlePrevText">
                     <h3 className="articlePrevTitle">
                       {article.attributes.title}

@@ -186,15 +186,20 @@
 
   .article {
     width: 100%;
-    display: grid;
-    grid-template-columns: 40% 60%;
-    grid-template-rows: auto;
+    
     margin-bottom: 50px;
     border-radius: 20px;
     border: 1px solid rgb(216, 215, 215);
-    grid-template-columns: 30% 70%;
+    
 
     /* height in media */
+  }
+
+  .article > a {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 30% 70%;
+    height: 100%;
   }
 
   .articlePrevImg {
@@ -206,6 +211,7 @@
   }
 
   .articlePrevText {
+    grid-column: 2/3;
     margin: 0 20px 0 30px;
     align-self: center;
   }
