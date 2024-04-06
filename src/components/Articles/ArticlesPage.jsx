@@ -27,7 +27,7 @@ export default function ArticlesPage() {
           ? `Total Articles: ${allArticlesData.length}`
           : `Waiting for articles`}
       </p>
-      <h1 id="articlesPageTitle">Latest Articles</h1>
+      <h1 id="articlesPageTitle">Latest Articles</h1> 
 
       <section id="articleBoxesSection">
         {allArticlesData ? (
