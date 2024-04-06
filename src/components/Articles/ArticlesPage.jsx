@@ -14,11 +14,11 @@ export default function ArticlesPage() {
         const dataMap = data.data.map((article) => {
           return article
         })
-        
+
         return setAllArticleData(dataMap);
       });
     }
-  }, []);
+  }, []); 
 
   return (
     <main id="articlesPage">
