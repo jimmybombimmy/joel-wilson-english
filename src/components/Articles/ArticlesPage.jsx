@@ -11,13 +11,11 @@ export default function ArticlesPage() {
   useEffect(() => {
     if (!allArticlesData) {
       getArticles().then(({ data }) => {
-        return setAllArticleData([
-          data.data[0],
-          data.data[0],
-          data.data[0],
-          data.data[0],
-          data.data[0],
-        ]);
+        const dataMap = data.data.map((article) => {
+          return article
+        })
+        
+        return setAllArticleData(dataMap);
       });
     }
   }, []);
